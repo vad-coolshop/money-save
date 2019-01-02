@@ -1,8 +1,11 @@
+row {
+    align-content: start;
+}
 input {
-    right: 0;
     color: black;
 }
 
 label {
-    left: 0;
+    text-align: start;
+    width: 200px;
 }
