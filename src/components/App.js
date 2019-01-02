@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import '../css/components/App.css';
-import axios from 'axios';
 import {Button} from 'react-bootstrap';
 
 import NewRep from './NewRepository';
+import axios from "axios";
 
 class App extends Component {
 
@@ -11,10 +11,12 @@ class App extends Component {
         super(props);
 
         this.state = {addRep: false};
+        this.allRepositories = [];
     }
 
     toggleNewRepository = () => {
         this.setState({addRep: !this.state.addRep});
+        if (!this.state.addRep) this.allRepositories = this.getAllRepository();
     };
 
     newRepositoryShow = (showNewRep) => {
@@ -23,6 +25,12 @@ class App extends Component {
         }
 
         return <Button bsStyle="primary" onClick={this.toggleNewRepository}>Add repository</Button>;
+    };
+
+    getAllRepository = async () => {
+        return await axios.get('/', {
+            params: {query: 'all'},
+        }).data.results;
     };
 
 
