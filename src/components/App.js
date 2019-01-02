@@ -8,6 +8,7 @@ class App extends Component {
                 <header className="App-header">Money Save</header>
                 <div className="App-body">
                     <a className="btn btn-primary">Add repository</a>
+                    <div className="rep-list"></div>
                 </div>
             </div>
         );
