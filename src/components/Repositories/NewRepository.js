@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../css/components/NewRepository.css';
+import '../../css/components/NewRepository.css';
 import {Button, Row} from "react-bootstrap";
 
 

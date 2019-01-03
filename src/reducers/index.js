@@ -1,3 +1,5 @@
+import {combineReducers} from 'redux';
+
 const repositoriesReducer = () => {
     return [
         {id: 0, name: 'banca', type: 'virtual', amount: 100},
@@ -7,10 +9,33 @@ const repositoriesReducer = () => {
     ]
 };
 
-const addNewRepository = (rep, action) => {
+const addNewRepositoryReducer = (rep=null, action) => {
     if (action.type === 'REPOSITORY_ADD') {
         return action.payload
     }
 
     return rep;
 };
+
+const deleteRepositoryReducer = (rep=null, action) => {
+    if (action.type === 'REPOSITORY_DELETE') {
+        return action.payload
+    }
+
+    return rep;
+};
+
+const editRepositoryReducer = (rep=null, action) => {
+    if (action.type === 'REPOSITORY_EDIT') {
+        return action.payload
+    }
+
+    return rep;
+};
+
+export default combineReducers({
+    allRepositories: repositoriesReducer,
+    addNewRepository: addNewRepositoryReducer,
+    editRepository: editRepositoryReducer,
+    deleteRepository: deleteRepositoryReducer
+});
