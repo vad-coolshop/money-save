@@ -8,16 +8,23 @@ class NewRepository extends Component {
     constructor(props) {
         super(props);
 
-        this.newRep = {name: 'undefined', startingValue: 0, type: 'undefined'};
+        this.state = {newRep: {name: 'undefined', startingValue: 0, type: 'undefined'}};
     }
 
     cancelNewRepository = () => {
-        this.newRep = {name: 'undefined', startingValue: 0, type: 'undefined'};
-        this.props.addRepository();
+        this.setState({newRep: {name: 'undefined', startingValue: 0, type: 'undefined'}});
+        this.props.showRepository();
     };
 
-    addNewRepository = () => {
-        this.props.addRepository();
+    addNewRepository = (event) => {
+        event.preventDefault();
+
+        // this.props.addRepository({form: this.form});
+        // this.props.showRepository();
+    };
+
+    onInputChange = event => {
+        this.setState({})
     };
 
     render() {
@@ -26,15 +33,24 @@ class NewRepository extends Component {
                 <form onSubmit={this.addNewRepository}>
                     <Row>
                         <label htmlFor="name">Repository Name</label>
-                        <input id="name" type="text" placeholder={this.newRep.name}/>
+                        <input id="name"
+                               value={this.state.newRep.name}
+                               type="text"
+                               placeholder={this.state.newRep.name}/>
                     </Row>
                     <Row>
                         <label htmlFor="startingValue">Starting Currency</label>
-                        <input id="startingValue" type="text" placeholder={this.newRep.startingValue}/>
+                        <input id="startingValue"
+                               value={this.state.newRep.startingValue}
+                               type="text"
+                               placeholder={this.state.newRep.startingValue}/>
                     </Row>
                     <Row>
                         <label htmlFor="type">Type</label>
-                        <input id="type" type="text" placeholder={this.newRep.type}/>
+                        <input id="type"
+                               value={this.state.newRep.type}
+                               type="text"
+                               placeholder={this.state.newRep.type}/>
                     </Row>
                     <Row>
                         <div className="btn-group">
