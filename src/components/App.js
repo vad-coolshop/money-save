@@ -50,7 +50,6 @@ class App extends Component {
                                     <Route path="/expenses" exact component={Expenses}/>
                                 </div>
                             </BrowserRouter>
-                            {bodyContainer()}
                         </Col>
                     </Grid>
                 </div>
