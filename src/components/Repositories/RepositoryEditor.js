@@ -1,15 +1,15 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {ControlLabel, Form, FormControl, FormGroup, HelpBlock} from "react-bootstrap";
+import {Form, FormControl, FormGroup} from "react-bootstrap";
 
 class RepositoryEditor extends React.Component {
     render() {
         const FieldGroup = ({id, label, help, ...props}) => {
             return (
                 <FormGroup controlId={id}>
-                    <ControlLabel>{label}</ControlLabel>
+                    {/*<ControlLabel>{label}</ControlLabel>*/}
                     <FormControl {...props} />
-                    {help && <HelpBlock>{help}</HelpBlock>}
+                    {/*{help && <HelpBlock>{help}</HelpBlock>}*/}
                 </FormGroup>
             );
         };
@@ -18,7 +18,7 @@ class RepositoryEditor extends React.Component {
                                                                         value={type.name}>{type.name}</option>);
         return (
             <div className="editing-item">
-                <Form onSubmit={this.addNewRepository}>
+                <Form inline onSubmit={this.addNewRepository}>
                     <FieldGroup
                         id="formControlsName"
                         type="text"
@@ -27,7 +27,7 @@ class RepositoryEditor extends React.Component {
                     />
 
                     <FormGroup controlId="formControlsType">
-                        <ControlLabel>Type</ControlLabel>
+                        {/*<ControlLabel>Type</ControlLabel>*/}
                         <FormControl componentClass="select" placeholder={this.props.item.type}>
                             {typeList}
                         </FormControl>

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Button, Table} from "react-bootstrap";
 import '../../css/components/RepsList.css';
+import {getAllRepositories, getRepository} from "../../actions";
 
 import RepositoryEditor from './RepositoryEditor';
 import ButtonGroup from "react-bootstrap/es/ButtonGroup";
@@ -13,7 +14,7 @@ class RepsList extends Component {
 
         this.state = {editing: false};
 
-        this.showingRepositories = this.props.allRepositories || [];
+        this.showingRepositories = this.props.repositories || [];
     }
 
     _toggleEdit = (itemId) => () => {
@@ -24,11 +25,23 @@ class RepsList extends Component {
         this.setState({editing: true});
     };
 
-    _saveChanges = () => {};
+    _saveChanges = () => {
+    };
+
+    _deleteRepository = () => {
+    };
+
+    _getRepository = (targetId) => {
+    };
 
     _addNewRepository = () => {
         this.props.newRep({});
     };
+
+
+    componentDidMount() {
+        this.props.getAllRepository();
+    }
 
     renderedTable = () => {
         const listItems = this.renderedList();
@@ -55,7 +68,7 @@ class RepsList extends Component {
             if (!item.editing) {
                 return (
                     <tr className="rep-element" key={item.id}>
-                        <td>{item.name}</td>
+                        <td onClick={this._getRepository(item.id)}>{item.name}</td>
                         <td>{item.type}</td>
                         <td>{item.amount}</td>
                         <td>
@@ -75,6 +88,7 @@ class RepsList extends Component {
                     <ButtonGroup>
                         <Button bsStyle="primary" onClick={this._toggleEdit(item.id)}>Cancel</Button>
                         <Button bsStyle="primary" onClick={this._saveChanges}>Save Changes</Button>
+                        <Button bsStyle="primary" onClick={this._deleteRepository}>Delete</Button>
                     </ButtonGroup>
                 </td>
             </tr>;
@@ -87,7 +101,7 @@ class RepsList extends Component {
 }
 
 const mapStateToProps = (state) => {
-    return {allRepositories: state.allRepositories};
+    return {repositories: state.repositories};
 };
 
-export default connect(mapStateToProps)(RepsList);
+export default connect(mapStateToProps, {getAllRepositories, getRepository})(RepsList);

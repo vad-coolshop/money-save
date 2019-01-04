@@ -50,7 +50,8 @@ class NewRepository extends Component {
             );
         };
 
-        const typeList = this.props.repositoryTypes.map(type => <option key={type.id} value={type.name}>{type.name}</option>);
+        const typeList = this.props.repositoryTypes.map(type => <option key={type.id}
+                                                                        value={type.name}>{type.name}</option>);
 
         return (
             <div className="new-repository">

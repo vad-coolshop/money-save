@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../css/components/App.css';
 import {Col, Grid} from "react-bootstrap";
+import {BrowserRouter, Route} from "react-router-dom";
 
 import RepsList from './Repositories/RepsList';
 import NewRepository from './Repositories/NewRepository';
@@ -20,7 +21,14 @@ class App extends Component {
 
     render() {
 
-        const bodyContainer = () => {
+        const Repository = () => {
+            if (this.state.newRep) {
+                return <NewRepository newRep={this.toggleNewRepository}/>
+            }
+            return <RepsList newRep={this.toggleNewRepository}/>
+        };
+
+        const Expenses = () => {
             if (this.state.newRep) {
                 return <NewRepository newRep={this.toggleNewRepository}/>
             }
@@ -36,6 +44,12 @@ class App extends Component {
                             <SideBar/>
                         </Col>
                         <Col xs={9}>
+                            <BrowserRouter>
+                                <div>
+                                    <Route path="/" exact component={Repository}/>
+                                    <Route path="/expenses" exact component={Expenses}/>
+                                </div>
+                            </BrowserRouter>
                             {bodyContainer()}
                         </Col>
                     </Grid>
