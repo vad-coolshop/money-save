@@ -25,6 +25,7 @@ class NewRepository extends Component {
         // this.props.showRepository();
     };
 
+    // todo not useful by now
     // getValidationState() {
     //     const length = this.state.value.length;
     //     if (length > 20) return 'success';

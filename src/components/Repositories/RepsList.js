@@ -8,9 +8,23 @@ import ButtonGroup from "react-bootstrap/es/ButtonGroup";
 
 class RepsList extends Component {
 
-    _showModal = (item) => () => {
+    constructor(props) {
+        super(props);
 
+        this.state = {editing: false};
+
+        this.showingRepositories = this.props.allRepositories || [];
+    }
+
+    _toggleEdit = (itemId) => () => {
+        this.showingRepositories.map(item => {
+            if (item.id === itemId) item.editing = !item.editing || false;
+            return '';
+        });
+        this.setState({editing: true});
     };
+
+    _saveChanges = () => {};
 
     _addNewRepository = () => {
         this.props.newRep({});
@@ -37,7 +51,7 @@ class RepsList extends Component {
     };
 
     renderedList = () => {
-        return this.props.allRepositories.map(item => {
+        return this.showingRepositories.map(item => {
             if (!item.editing) {
                 return (
                     <tr className="rep-element" key={item.id}>
@@ -47,7 +61,7 @@ class RepsList extends Component {
                         <td>
                             <ButtonGroup>
                                 <Button bsStyle="danger">-</Button>
-                                <Button bsStyle="primary" onClick={this._showModal(item)}>Edit</Button>
+                                <Button bsStyle="primary" onClick={this._toggleEdit(item.id)}>Edit</Button>
                                 <Button bsStyle="danger">+</Button>
                             </ButtonGroup>
                         </td>
@@ -55,7 +69,15 @@ class RepsList extends Component {
                 );
             }
 
-            return <RepositoryEditor rep={item}/>;
+            return <tr key={item.id}>
+                <td colSpan={3}><RepositoryEditor item={item}/></td>
+                <td>
+                    <ButtonGroup>
+                        <Button bsStyle="primary" onClick={this._toggleEdit(item.id)}>Cancel</Button>
+                        <Button bsStyle="primary" onClick={this._saveChanges}>Save Changes</Button>
+                    </ButtonGroup>
+                </td>
+            </tr>;
         });
     };
 

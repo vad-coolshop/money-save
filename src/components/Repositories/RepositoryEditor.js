@@ -1,46 +1,45 @@
 import React from 'react';
 import {connect} from 'react-redux';
-
-import {Button, Row} from "react-bootstrap";
-import ButtonGroup from "react-bootstrap/es/ButtonGroup";
-
+import {ControlLabel, Form, FormControl, FormGroup, HelpBlock} from "react-bootstrap";
 
 class RepositoryEditor extends React.Component {
-
-    exitEditor = () => {};
-
-    saveChanges = () => {};
-
     render() {
+        const FieldGroup = ({id, label, help, ...props}) => {
+            return (
+                <FormGroup controlId={id}>
+                    <ControlLabel>{label}</ControlLabel>
+                    <FormControl {...props} />
+                    {help && <HelpBlock>{help}</HelpBlock>}
+                </FormGroup>
+            );
+        };
+
+        const typeList = this.props.repositoryTypes.map(type => <option key={type.id}
+                                                                        value={type.name}>{type.name}</option>);
         return (
             <div className="editing-item">
-                <Row>
-                    <label htmlFor="name">Repository Name</label>
-                    <input id="name"
-                           value={this.state.newRep.name}
-                           type="text"
-                           placeholder={this.state.newRep.name}/>
-                </Row>
-                <Row>
-                    <label htmlFor="startingValue">Starting Currency</label>
-                    <input id="startingValue"
-                           value={this.state.newRep.startingValue}
-                           type="text"
-                           placeholder={this.state.newRep.startingValue}/>
-                </Row>
-                <Row>
-                    <ButtonGroup>
-                        <Button bsStyle="primary" onClick={this.exitEditor}>Cancel</Button>
-                        <Button bsStyle="primary" onClick={this.saveChanges}>Save Changes</Button>
-                    </ButtonGroup>
-                </Row>
+                <Form onSubmit={this.addNewRepository}>
+                    <FieldGroup
+                        id="formControlsName"
+                        type="text"
+                        label="Name"
+                        placeholder={this.props.item.name}
+                    />
+
+                    <FormGroup controlId="formControlsType">
+                        <ControlLabel>Type</ControlLabel>
+                        <FormControl componentClass="select" placeholder={this.props.item.type}>
+                            {typeList}
+                        </FormControl>
+                    </FormGroup>
+                </Form>
             </div>
         );
     }
 }
 
 const mapStateToProps = (state) => {
-    return {deletingRepository: state.deletingRepository};
+    return {repositoryTypes: state.repositoryTypes};
 };
 
-export default connect(mapStateToProps, {})(RepositoryEditor);
+export default connect(mapStateToProps)(RepositoryEditor);

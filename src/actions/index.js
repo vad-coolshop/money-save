@@ -15,7 +15,7 @@ export const deleteRepository = (repId) => {
 };
 
 
-export const rditRepository = (rep) => {
+export const editRepository = (rep) => {
     return {
         type: 'REPOSITORY_EDIT',
         payload: rep

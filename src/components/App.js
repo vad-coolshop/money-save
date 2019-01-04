@@ -24,7 +24,6 @@ class App extends Component {
             if (this.state.newRep) {
                 return <NewRepository newRep={this.toggleNewRepository}/>
             }
-            /*<RepositoryEditor/>*/
             return <RepsList newRep={this.toggleNewRepository}/>
         };
 

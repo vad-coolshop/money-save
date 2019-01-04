@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
 
-const repositoriesReducer = () => {
+let repositoriesReducer = () => {
     return [
         {id: 0, name: 'Banca', type: 'Virtual', amount: 100},
         {id: 1, name: 'Contante', type: 'Cash', amount: 40},
