@@ -1,6 +1,7 @@
 import {combineReducers} from 'redux';
 
-const repositoriesReducer = (state = [], action) => {
+// const repositoriesReducer = (state = [], action) => {
+const repositoriesReducer = () => {
     // if (action.type === 'REPOSITORY_GET_ALL') return action.payload;
     return [
         {id: 0, name: 'Banca', type: 'Virtual', amount: 100},

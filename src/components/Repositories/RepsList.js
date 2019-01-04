@@ -38,10 +38,9 @@ class RepsList extends Component {
         this.props.newRep({});
     };
 
-
-    componentDidMount() {
-        this.props.getAllRepository();
-    }
+    // componentDidMount() {
+    //     this.props.repositories();
+    // }
 
     renderedTable = () => {
         const listItems = this.renderedList();
@@ -104,4 +103,5 @@ const mapStateToProps = (state) => {
     return {repositories: state.repositories};
 };
 
-export default connect(mapStateToProps, {getAllRepositories, getRepository})(RepsList);
+export default connect(mapStateToProps)(RepsList);
+// export default connect(mapStateToProps, {getAllRepositories, getRepository})(RepsList);
