@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import '../../css/components/NewRepository.css';
-import {Button, Row} from "react-bootstrap";
+import {Button, ControlLabel, Form, FormControl, FormGroup, HelpBlock} from "react-bootstrap";
+import {connect} from "react-redux";
+import ButtonGroup from "react-bootstrap/es/ButtonGroup";
 
 
 class NewRepository extends Component {
@@ -8,12 +10,12 @@ class NewRepository extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {newRep: {name: 'undefined', startingValue: 0, type: 'undefined'}};
+        this.state = {newRep: {name: 'undefined', startingValue: 0, type: 'undefined'}, value: ''};
     }
 
-    cancelNewRepository = () => {
+    exitEditor = () => {
         this.setState({newRep: {name: 'undefined', startingValue: 0, type: 'undefined'}});
-        this.props.showRepository();
+        this.props.newRep({});
     };
 
     addNewRepository = (event) => {
@@ -23,45 +25,68 @@ class NewRepository extends Component {
         // this.props.showRepository();
     };
 
-    onInputChange = event => {
-        this.setState({})
-    };
+    // getValidationState() {
+    //     const length = this.state.value.length;
+    //     if (length > 20) return 'success';
+    //     else if (length > 10) return 'warning';
+    //     else if (length > 0) return 'error';
+    //     return null;
+    // }
+
+    // handleChange = event => {
+    //     this.setState({value: event.target.value});
+    // };
+
 
     render() {
+        const FieldGroup = ({id, label, help, ...props}) => {
+            return (
+                <FormGroup controlId={id}>
+                    <ControlLabel>{label}</ControlLabel>
+                    <FormControl {...props} />
+                    {help && <HelpBlock>{help}</HelpBlock>}
+                </FormGroup>
+            );
+        };
+
+        const typeList = this.props.repositoryTypes.map(type => <option key={type.id} value={type.name}>{type.name}</option>);
+
         return (
-            <div className="new-repository container-fluid">
-                <form onSubmit={this.addNewRepository}>
-                    <Row>
-                        <label htmlFor="name">Repository Name</label>
-                        <input id="name"
-                               value={this.state.newRep.name}
-                               type="text"
-                               placeholder={this.state.newRep.name}/>
-                    </Row>
-                    <Row>
-                        <label htmlFor="startingValue">Starting Currency</label>
-                        <input id="startingValue"
-                               value={this.state.newRep.startingValue}
-                               type="text"
-                               placeholder={this.state.newRep.startingValue}/>
-                    </Row>
-                    <Row>
-                        <label htmlFor="type">Type</label>
-                        <input id="type"
-                               value={this.state.newRep.type}
-                               type="text"
-                               placeholder={this.state.newRep.type}/>
-                    </Row>
-                    <Row>
-                        <div className="btn-group">
-                            <Button bsStyle="danger" onClick={this.cancelNewRepository}>Cancel</Button>
-                            <Button bsStyle="primary" onClick={this.addNewRepository}>Confirm</Button>
-                        </div>
-                    </Row>
-                </form>
+            <div className="new-repository">
+                <Form onSubmit={this.addNewRepository}>
+                    <FieldGroup
+                        id="formControlsName"
+                        type="text"
+                        label="Name"
+                        placeholder={this.state.newRep.name}
+                    />
+
+                    <FieldGroup
+                        id="formControlsPrice"
+                        type="text"
+                        label="Amount"
+                        placeholder={this.state.newRep.startingValue}
+                    />
+
+                    <FormGroup controlId="formControlsType">
+                        <ControlLabel>Type</ControlLabel>
+                        <FormControl componentClass="select" placeholder="Type">
+                            {typeList}
+                        </FormControl>
+                    </FormGroup>
+
+                    <ButtonGroup>
+                        <Button bsStyle="primary" onClick={this.exitEditor}>Cancel</Button>
+                        <Button bsStyle="primary" type="submit">Generate</Button>
+                    </ButtonGroup>
+                </Form>
             </div>
         );
     }
 }
 
-export default NewRepository;
+const mapStateToProps = (state) => {
+    return {repositoryTypes: state.repositoryTypes};
+};
+
+export default connect(mapStateToProps)(NewRepository);

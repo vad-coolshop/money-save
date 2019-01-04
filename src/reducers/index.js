@@ -2,10 +2,19 @@ import {combineReducers} from 'redux';
 
 const repositoriesReducer = () => {
     return [
-        {id: 0, name: 'banca', type: 'virtual', amount: 100},
-        {id: 1, name: 'contante', type: 'cash', amount: 40},
-        {id: 2, name: 'carta', type: 'virtual', amount: 30},
-        {id: 3, name: 'satispay', type: 'virtual', amount: 150},
+        {id: 0, name: 'Banca', type: 'Virtual', amount: 100},
+        {id: 1, name: 'Contante', type: 'Cash', amount: 40},
+        {id: 2, name: 'Carta', type: 'Virtual', amount: 30},
+        {id: 3, name: 'Satispay', type: 'Virtual', amount: 150},
+    ]
+};
+
+const repositoryTypesReducer = () => {
+
+    return [
+        {id: 0, name: '--None--'},
+        {id: 1, name: 'Virtual'},
+        {id: 2, name: 'Cash'},
     ]
 };
 
@@ -37,5 +46,6 @@ export default combineReducers({
     allRepositories: repositoriesReducer,
     addNewRepository: addNewRepositoryReducer,
     editRepository: editRepositoryReducer,
-    deleteRepository: deleteRepositoryReducer
+    deleteRepository: deleteRepositoryReducer,
+    repositoryTypes: repositoryTypesReducer
 });

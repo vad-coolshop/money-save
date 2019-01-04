@@ -1,47 +1,61 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {deleteRepository} from '../../actions';
+import {Button, Table} from "react-bootstrap";
+import '../../css/components/RepsList.css';
 
-import {Button} from "react-bootstrap";
+import RepositoryEditor from './RepositoryEditor';
+import ButtonGroup from "react-bootstrap/es/ButtonGroup";
 
 class RepsList extends Component {
+
+    _showModal = (item) => () => {
+
+    };
+
+    _addNewRepository = () => {
+        this.props.newRep({});
+    };
 
     renderedTable = () => {
         const listItems = this.renderedList();
 
         return (
-            <table>
+            <Table>
                 <thead>
                 <tr>
                     <th>Name</th>
                     <th>Type</th>
                     <th>Total</th>
-                    <th>Actions</th>
+                    <th>Actions <Button bsStyle="primary" onClick={this._addNewRepository}>Add +</Button></th>
                 </tr>
                 </thead>
                 <tbody>
                 {listItems}
                 </tbody>
-            </table>
+            </Table>
         );
     };
 
     renderedList = () => {
         return this.props.allRepositories.map(item => {
-            return (
-                <tr className="rep-element" key={item.id}>
-                    <td>{item.name}</td>
-                    <td>{item.type}</td>
-                    <td>{item.amount}</td>
-                    <td>
-                        <div className="btn-group">
-                            <Button bsStyle="primary">Edit</Button>
-                            <Button bsStyle="primary">-</Button>
-                            <Button bsStyle="danger">+</Button>
-                        </div>
-                    </td>
-                </tr>
-            );
+            if (!item.editing) {
+                return (
+                    <tr className="rep-element" key={item.id}>
+                        <td>{item.name}</td>
+                        <td>{item.type}</td>
+                        <td>{item.amount}</td>
+                        <td>
+                            <ButtonGroup>
+                                <Button bsStyle="danger">-</Button>
+                                <Button bsStyle="primary" onClick={this._showModal(item)}>Edit</Button>
+                                <Button bsStyle="danger">+</Button>
+                            </ButtonGroup>
+                        </td>
+                    </tr>
+                );
+            }
+
+            return <RepositoryEditor rep={item}/>;
         });
     };
 
@@ -54,4 +68,4 @@ const mapStateToProps = (state) => {
     return {allRepositories: state.allRepositories};
 };
 
-export default connect(mapStateToProps, {deleteRepository})(RepsList);
+export default connect(mapStateToProps)(RepsList);
