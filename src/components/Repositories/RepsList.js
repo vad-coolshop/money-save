@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Button, Table} from "react-bootstrap";
 import '../../css/components/RepsList.css';
-import {getAllRepositories, getRepository} from "../../actions";
+// import {getAllRepositories, getRepository} from "../../actions";
 
 import RepositoryEditor from './RepositoryEditor';
 import ButtonGroup from "react-bootstrap/es/ButtonGroup";
