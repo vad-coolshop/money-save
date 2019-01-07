@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Form, FormControl, FormGroup} from "react-bootstrap";
 
-class RepositoryEditor extends React.Component {
+class WalletEditor extends React.Component {
     render() {
         const FieldGroup = ({id, label, help, ...props}) => {
             return (
@@ -14,11 +14,11 @@ class RepositoryEditor extends React.Component {
             );
         };
 
-        const typeList = this.props.repositoryTypes.map(type => <option key={type.id}
+        const typeList = this.props.walletTypes.map(type => <option key={type.id}
                                                                         value={type.name}>{type.name}</option>);
         return (
             <div className="editing-item">
-                <Form inline onSubmit={this.addNewRepository}>
+                <Form inline onSubmit={this.addNewWallet}>
                     <FieldGroup
                         id="formControlsName"
                         type="text"
@@ -39,7 +39,7 @@ class RepositoryEditor extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return {repositoryTypes: state.repositoryTypes};
+    return {walletTypes: state.walletTypes};
 };
 
-export default connect(mapStateToProps)(RepositoryEditor);
+export default connect(mapStateToProps)(WalletEditor);

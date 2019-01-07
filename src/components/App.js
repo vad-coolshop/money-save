@@ -3,8 +3,8 @@ import '../css/components/App.css';
 import {Col, Grid} from "react-bootstrap";
 import {BrowserRouter, Route} from "react-router-dom";
 
-import RepsList from './Repositories/RepsList';
-import NewRepository from './Repositories/NewRepository';
+import WalletList from './Wallets/WalletList';
+import NewWallet from './Wallets/WalletCreator';
 import SideBar from './SideBar/SideBar';
 
 class App extends Component {
@@ -12,27 +12,27 @@ class App extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {newRep: false};
+        this.state = {newWallet: false};
     }
 
-    toggleNewRepository = () => {
-        this.setState({newRep: !this.state.newRep});
+    toggleNewWallet = () => {
+        this.setState({newWallet: !this.state.newWallet});
     };
 
     render() {
 
-        const Repository = () => {
-            if (this.state.newRep) {
-                return <NewRepository newRep={this.toggleNewRepository}/>
+        const Wallet = () => {
+            if (this.state.newWallet) {
+                return <NewWallet newWallet={this.toggleNewWallet}/>
             }
-            return <RepsList newRep={this.toggleNewRepository}/>
+            return <WalletList newWallet={this.toggleNewWallet}/>
         };
 
         const Expenses = () => {
-            if (this.state.newRep) {
-                return <NewRepository newRep={this.toggleNewRepository}/>
+            if (this.state.newWallet) {
+                return <NewWallet newWallet={this.toggleNewWallet}/>
             }
-            return <RepsList newRep={this.toggleNewRepository}/>
+            return <WalletList newWallet={this.toggleNewWallet}/>
         };
 
         return (
@@ -46,7 +46,7 @@ class App extends Component {
                         <Col xs={9}>
                             <BrowserRouter>
                                 <div>
-                                    <Route path="/" exact component={Repository}/>
+                                    <Route path="/" exact component={Wallet}/>
                                     <Route path="/expenses" exact component={Expenses}/>
                                 </div>
                             </BrowserRouter>

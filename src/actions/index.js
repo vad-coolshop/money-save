@@ -1,63 +1,61 @@
 //Action creator
-import Repositories from "../api/Repositories";
+import Wallets from "../api/Wallets";
 
-export const addNewRepository = rep => {
+export const addNewWallet = wallet => {
     return {
-        type: 'REPOSITORY_ADD',
-        payload: rep
+        type: 'WALLET_ADD',
+        payload: wallet
     };
 };
 
-
-export const deleteRepository = (repId) => {
+export const deleteWallet = (walletId) => {
     return {
-        type: 'REPOSITORY_DELETE',
-        payload: repId
+        type: 'WALLET_DELETE',
+        payload: walletId
     };
 };
 
-
-export const editRepository = (rep) => {
+export const editWallet = (wallet) => {
     return {
-        type: 'REPOSITORY_EDIT',
-        payload: rep
+        type: 'WALLET_EDIT',
+        payload: wallet
     };
 };
 
-export const deleteExpenses = (rep) => {
+export const deleteExpenses = (wallet) => {
     return {
         type: 'EXPENSES_DELETE',
-        payload: rep
+        payload: wallet
     };
 };
 
-export const editExpenses = (rep) => {
+export const editExpenses = (wallet) => {
     return {
         type: 'EXPENSES_EDIT',
-        payload: rep
+        payload: wallet
     };
 };
 
-export const getAllRepositories = () => async dispatch => {
+export const getAllWallets = () => async dispatch => {
     // todo da cambiare l'argomento del get
-    const response = await Repositories.get('/repositories');
-    dispatch({type: 'REPOSITORY_GET_ALL', payload: response.data});
+    const response = await Wallets.get('/wallets');
+    dispatch({type: 'WALLET_GET_ALL', payload: response.data});
 };
 
-export const getRepository = (targetId) => async dispatch => {
+export const getWallet = (targetId) => async dispatch => {
     // todo da cambiare l'argomento del get
-    const response = await Repositories.get(`/repositories/${targetId}`);
-    dispatch({type: 'REPOSITORY_GET_ALL', payload: response.data});
+    const response = await Wallets.get(`/wallets/${targetId}`);
+    dispatch({type: 'WALLET_GET_ALL', payload: response.data});
 };
 
 export const getAllExpenses = () => async dispatch => {
     // todo da cambiare l'argomento del get
-    const response = await Repositories.get('/expenses');
+    const response = await Wallets.get('/expenses');
     dispatch({type: 'EXPENSES_GET_ALL', payload: response.data});
 };
 
 export const getRxpense = (targetId) => async dispatch => {
     // todo da cambiare l'argomento del get
-    const response = await Repositories.get(`/expenses/${targetId}`);
+    const response = await Wallets.get(`/expenses/${targetId}`);
     dispatch({type: 'EXPENSES_GET_ALL', payload: response.data});
 };

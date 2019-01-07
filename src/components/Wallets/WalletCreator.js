@@ -1,28 +1,29 @@
 import React, {Component} from 'react';
-import '../../css/components/NewRepository.css';
+import '../../css/components/WalletCreator.css';
 import {Button, ControlLabel, Form, FormControl, FormGroup, HelpBlock} from "react-bootstrap";
 import {connect} from "react-redux";
 import ButtonGroup from "react-bootstrap/es/ButtonGroup";
 
 
-class NewRepository extends Component {
+class WalletCreator extends Component {
 
     constructor(props) {
         super(props);
 
-        this.state = {newRep: {name: 'undefined', startingValue: 0, type: 'undefined'}, value: ''};
+        this.stateDefault = {newWallet: {name: null, startingValue: 0, type: null}, value: ''};
+        this.state = this.stateDefault;
     }
 
     exitEditor = () => {
-        this.setState({newRep: {name: 'undefined', startingValue: 0, type: 'undefined'}});
-        this.props.newRep({});
+        this.setState({newWallet: this.stateDefault});
+        this.props.newWallet({});
     };
 
-    addNewRepository = (event) => {
+    addNewWallet = (event) => {
         event.preventDefault();
 
-        // this.props.addRepository({form: this.form});
-        // this.props.showRepository();
+        // this.props.addWallet({form: this.form});
+        // this.props.showWallet();
     };
 
     // todo not useful by now
@@ -50,24 +51,23 @@ class NewRepository extends Component {
             );
         };
 
-        const typeList = this.props.repositoryTypes.map(type => <option key={type.id}
-                                                                        value={type.name}>{type.name}</option>);
+        const typeList = this.props.walletTypes.map(type => <option key={type.id} value={type.name}>{type.name}</option>);
 
         return (
-            <div className="new-repository">
-                <Form onSubmit={this.addNewRepository}>
+            <div className="new-wallet">
+                <Form onSubmit={this.addNewWallet}>
                     <FieldGroup
                         id="formControlsName"
                         type="text"
                         label="Name"
-                        placeholder={this.state.newRep.name}
+                        placeholder={this.state.newWallet.name}
                     />
 
                     <FieldGroup
                         id="formControlsPrice"
                         type="text"
                         label="Amount"
-                        placeholder={this.state.newRep.startingValue}
+                        placeholder={this.state.newWallet.startingValue}
                     />
 
                     <FormGroup controlId="formControlsType">
@@ -88,7 +88,7 @@ class NewRepository extends Component {
 }
 
 const mapStateToProps = (state) => {
-    return {repositoryTypes: state.repositoryTypes};
+    return {walletTypes: state.walletTypes};
 };
 
-export default connect(mapStateToProps)(NewRepository);
+export default connect(mapStateToProps)(WalletCreator);

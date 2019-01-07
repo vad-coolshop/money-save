@@ -1,24 +1,24 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Button, Table} from "react-bootstrap";
-import '../../css/components/RepsList.css';
-// import {getAllRepositories, getRepository} from "../../actions";
-
-import RepositoryEditor from './RepositoryEditor';
+import '../../css/components/WalletList.css';
+import WalletEditor from './WalletEditor';
 import ButtonGroup from "react-bootstrap/es/ButtonGroup";
 
-class RepsList extends Component {
+// import {getAllWallets, getWallet} from "../../actions";
+
+class WalletList extends Component {
 
     constructor(props) {
         super(props);
 
         this.state = {editing: false};
 
-        this.showingRepositories = this.props.repositories || [];
+        this.showingWallets = this.props.wallets || [];
     }
 
-    _toggleEdit = (itemId) => () => {
-        this.showingRepositories.map(item => {
+    _toggleEdit = (itemId) => {
+        this.showingWallets.map(item => {
             if (item.id === itemId) item.editing = !item.editing || false;
             return '';
         });
@@ -28,18 +28,18 @@ class RepsList extends Component {
     _saveChanges = () => {
     };
 
-    _deleteRepository = () => {
+    _deleteWallet = () => {
     };
 
-    _getRepository = (targetId) => {
+    _getWallet = (targetId) => {
     };
 
-    _addNewRepository = () => {
-        this.props.newRep({});
+    _addNewWallet = () => {
+        this.props.newWallet({});
     };
 
     // componentDidMount() {
-    //     this.props.repositories();
+    //     this.props.wallets();
     // }
 
     renderedTable = () => {
@@ -52,7 +52,7 @@ class RepsList extends Component {
                     <th>Name</th>
                     <th>Type</th>
                     <th>Total</th>
-                    <th>Actions <Button bsStyle="primary" onClick={this._addNewRepository}>Add +</Button></th>
+                    <th>Actions <Button bsStyle="primary" onClick={this._addNewWallet}>Add +</Button></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -63,17 +63,18 @@ class RepsList extends Component {
     };
 
     renderedList = () => {
-        return this.showingRepositories.map(item => {
+        return this.showingWallets.map(item => {
             if (!item.editing) {
                 return (
-                    <tr className="rep-element" key={item.id}>
-                        <td onClick={this._getRepository(item.id)}>{item.name}</td>
+                    <tr className="wallet-element" key={item.id}>
+                        <td onClick={this._getWallet(item.id)}>{item.name}</td>
                         <td>{item.type}</td>
                         <td>{item.amount}</td>
                         <td>
                             <ButtonGroup>
                                 <Button bsStyle="danger">-</Button>
-                                <Button bsStyle="primary" onClick={this._toggleEdit(item.id)}>Edit</Button>
+                                {/*<Button bsStyle="primary" onClick={this._toggleEdit.bind(this)}>Edit</Button>*/}
+                                <Button bsStyle="primary" onClick={() => this._toggleEdit(item.id)}>Edit</Button>
                                 <Button bsStyle="danger">+</Button>
                             </ButtonGroup>
                         </td>
@@ -82,12 +83,12 @@ class RepsList extends Component {
             }
 
             return <tr key={item.id}>
-                <td colSpan={3}><RepositoryEditor item={item}/></td>
+                <td colSpan={3}><WalletEditor item={item}/></td>
                 <td>
                     <ButtonGroup>
-                        <Button bsStyle="primary" onClick={this._toggleEdit(item.id)}>Cancel</Button>
+                        <Button bsStyle="primary" onClick={() => this._toggleEdit(item.id)}>Cancel</Button>
                         <Button bsStyle="primary" onClick={this._saveChanges}>Save Changes</Button>
-                        <Button bsStyle="primary" onClick={this._deleteRepository}>Delete</Button>
+                        <Button bsStyle="primary" onClick={this._deleteWallet}>Delete</Button>
                     </ButtonGroup>
                 </td>
             </tr>;
@@ -95,13 +96,13 @@ class RepsList extends Component {
     };
 
     render() {
-        return <div className="rep-list">{this.renderedTable()}</div>;
+        return <div className="wallet-list">{this.renderedTable()}</div>;
     }
 }
 
 const mapStateToProps = (state) => {
-    return {repositories: state.repositories};
+    return {wallets: state.wallets};
 };
 
-export default connect(mapStateToProps)(RepsList);
-// export default connect(mapStateToProps, {getAllRepositories, getRepository})(RepsList);
+export default connect(mapStateToProps)(WalletList);
+// export default connect(mapStateToProps, {getAllWallets, getWallet})(WalletList);

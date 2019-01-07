@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux';
 
-// const repositoriesReducer = (state = [], action) => {
-const repositoriesReducer = () => {
-    // if (action.type === 'REPOSITORY_GET_ALL') return action.payload;
+// const walletsReducer = (state = [], action) => {
+const walletsReducer = () => {
+    // if (action.type === 'WALLET_GET_ALL') return action.payload;
     return [
         {id: 0, name: 'Banca', type: 'Virtual', amount: 100},
         {id: 1, name: 'Contante', type: 'Cash', amount: 40},
@@ -15,39 +15,40 @@ const repositoriesReducer = () => {
 
 const availablePagesReducer = () => {
     return [
-        {id: 0, name: 'repositories', label: 'Repositories', url: '/repositories'},
+        {id: 0, name: 'wallets', label: 'Wallets', url: '/wallets'},
         {id: 1, name: 'expenses', label: 'Expenses', url: '/expenses'},
     ];
 };
 
-const addNewRepositoryReducer = (rep = null, action) => {
-    if (action.type === 'REPOSITORY_ADD') return action.payload;
-    return rep;
+const addNewWalletReducer = (wallet = null, action) => {
+    if (action.type === 'WALLET_ADD') return action.payload;
+    return wallet;
 };
 
-const deleteRepositoryReducer = (rep = null, action) => {
-    if (action.type === 'REPOSITORY_DELETE') return action.payload;
-    return rep;
+const deleteWalletReducer = (wallet = null, action) => {
+    if (action.type === 'WALLET_DELETE') return action.payload;
+    return wallet;
 };
 
-const editRepositoryReducer = (rep = null, action) => {
-    if (action.type === 'REPOSITORY_EDIT') return action.payload;
-    return rep;
+const editWalletReducer = (wallet = null, action) => {
+    if (action.type === 'WALLET_EDIT') return action.payload;
+    return wallet;
 };
 
-const repositoryTypesReducer = () => {
+const walletTypesReducer = () => {
     return [
         {id: 0, name: '--None--'},
         {id: 1, name: 'Virtual'},
         {id: 2, name: 'Cash'},
+        {id: 3, name: 'Debt'},
     ]
 };
 
 export default combineReducers({
-    repositories: repositoriesReducer,
-    addNewRepository: addNewRepositoryReducer,
-    editRepository: editRepositoryReducer,
-    deleteRepository: deleteRepositoryReducer,
+    wallets: walletsReducer,
+    addNewWallet: addNewWalletReducer,
+    editWallet: editWalletReducer,
+    deleteWallet: deleteWalletReducer,
     availablePages: availablePagesReducer,
-    repositoryTypes: repositoryTypesReducer
+    walletTypes: walletTypesReducer
 });
