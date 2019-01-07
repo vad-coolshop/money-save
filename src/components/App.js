@@ -29,29 +29,24 @@ class App extends Component {
         };
 
         const Expenses = () => {
-            if (this.state.newWallet) {
-                return <NewWallet newWallet={this.toggleNewWallet}/>
-            }
-            return <WalletList newWallet={this.toggleNewWallet}/>
+            return <div>Spese</div>
         };
 
         return (
             <div className="App">
                 <header className="App-header">Money Save</header>
                 <div className="App-body">
-                    <Grid>
-                        <Col xs={3}>
-                            <SideBar/>
-                        </Col>
-                        <Col xs={9}>
-                            <BrowserRouter>
-                                <div>
-                                    <Route path="/" exact component={Wallet}/>
-                                    <Route path="/expenses" exact component={Expenses}/>
-                                </div>
-                            </BrowserRouter>
-                        </Col>
-                    </Grid>
+                    <BrowserRouter>
+                        <Grid>
+                            <Col xs={3}>
+                                <SideBar/>
+                            </Col>
+                            <Col xs={9}>
+                                <Route path="/" exact component={Wallet}/>
+                                <Route path="/expenses" exact component={Expenses}/>
+                            </Col>
+                        </Grid>
+                    </BrowserRouter>
                 </div>
             </div>
         );
