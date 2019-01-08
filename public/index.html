@@ -24,6 +24,20 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Money Manager</title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      let config = {
+        apiKey: "AIzaSyDcSntSYvwfGWk_EMiIEWTvJYF7LWIetp0",
+        authDomain: "walletmanager-bb788.firebaseapp.com",
+        databaseURL: "https://walletmanager-bb788.firebaseio.com",
+        projectId: "walletmanager-bb788",
+        storageBucket: "walletmanager-bb788.appspot.com",
+        messagingSenderId: "561659640592"
+      };
+      firebase.initializeApp(config);
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

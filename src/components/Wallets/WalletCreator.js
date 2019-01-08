@@ -3,9 +3,16 @@ import '../../css/components/WalletCreator.css';
 import {Button} from "react-bootstrap";
 import ButtonGroup from "react-bootstrap/es/ButtonGroup";
 import {Field, reduxForm} from "redux-form";
+import firebase from "firebase";
 
 
 class WalletCreator extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.db = firebase.database();
+    }
 
     exitEditor = () => {
         this.props.newWallet({});
@@ -29,7 +36,7 @@ class WalletCreator extends Component {
                 return <div> {formProps.meta.error}</div>
         };
 
-        const errorCheck = `field${formProps.meta.error&& formProps.meta.touched ? 'error' : ''}`;
+        const errorCheck = `field${formProps.meta.error && formProps.meta.touched ? 'error' : ''}`;
 
         return (
             <div className={errorCheck}>
@@ -40,7 +47,21 @@ class WalletCreator extends Component {
         );
     };
 
-    onSubmit = (formValues) => {};
+    onSubmit = async (formValues) => {
+
+        let walletId = 'wallet' + Math.random();
+
+        try {
+            await this.db.ref(`users/${walletId}`).set({
+                name: formValues.name,
+                surname: formValues.surname,
+                family: formValues.family || '',
+                email: formValues.email
+            });
+        } catch (e) {
+            console.log(e);
+        }
+    };
 
 
     render() {
