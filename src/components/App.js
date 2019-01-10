@@ -3,6 +3,7 @@ import '../css/components/App.css';
 import {Col, Grid} from "react-bootstrap";
 import {BrowserRouter, Route} from "react-router-dom";
 
+import Header from './Header/Header'
 import WalletList from './Wallets/WalletList';
 import NewWallet from './Wallets/WalletCreator';
 import SideBar from './SideBar/SideBar';
@@ -37,6 +38,7 @@ class App extends Component {
                 <header className="App-header">Money Save</header>
                 <div className="App-body">
                     <BrowserRouter>
+                        <Header/>
                         <Grid>
                             <Col xs={3}>
                                 <SideBar/>
