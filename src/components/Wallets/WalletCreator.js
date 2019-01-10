@@ -8,26 +8,11 @@ import {createWallet} from "../../actions";
 
 class WalletCreator extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     exitEditor = () => {
         this.props.newWallet({});
     };
 
-    // todo not useful by now
-    // getValidationState() {
-    //     const length = this.state.value.length;
-    //     if (length > 20) return 'success';
-    //     else if (length > 10) return 'warning';
-    //     else if (length > 0) return 'error';
-    //     return null;
-    // }
-
     renderInput = (formProps) => {
-        console.log(formProps);
-
         // {...formProps.input} adds all standard input to <input />
         const renderError = ({error, touched}) => {
             if (touched && error)
@@ -47,23 +32,11 @@ class WalletCreator extends Component {
 
     onSubmit = (formValues) => {
         this.props.createWallet(formValues);
+        this.exitEditor();
     };
 
 
     render() {
-        console.log(this.props);
-        // const FieldGroup = ({id, label, help, ...props}) => {
-        //     return (
-        //         <FormGroup controlId={id}>
-        //             <ControlLabel>{label}</ControlLabel>
-        //             <FormControl {...props} />
-        //             {help && <HelpBlock>{help}</HelpBlock>}
-        //         </FormGroup>
-        //     );
-        // };
-
-        // const typeList = this.props.walletTypes.map(type => <option key={type.id}
-        //                                                             value={type.name}>{type.name}</option>);
 
         return (
             <div className="new-wallet">
@@ -85,7 +58,8 @@ class WalletCreator extends Component {
 
 const validate = (formValues) => {
     const errors = {};
-    if (!formValues.name) errors.name = 'You must enter a name'; // redux confronta il nome con la proprietà di errors e se trova corrispondenza lancia un errore
+    // redux confronta il nome con la proprietà di errors e se trova corrispondenza lancia un errore
+    if (!formValues.name) errors.name = 'You must enter a name';
     if (!formValues.type) errors.type = 'You must enter a type';
     return errors;
 };

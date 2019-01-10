@@ -12,8 +12,6 @@ class WalletList extends Component {
         super(props);
 
         this.state = {editing: false};
-
-        this.showingWallets = this.props.wallets || [];
     }
 
     componentDidMount() {
@@ -21,7 +19,7 @@ class WalletList extends Component {
     }
 
     _toggleEdit = (itemId) => {
-        this.showingWallets.map(item => {
+        this.props.wallets.map(item => {
             if (item.id === itemId) item.editing = !item.editing || false;
             return '';
         });
@@ -40,10 +38,6 @@ class WalletList extends Component {
     _createWallet = () => {
         this.props.newWallet({});
     };
-
-    // componentDidMount() {
-    //     this.props.wallets();
-    // }
 
     renderedTable = () => {
         const listItems = this.renderedList();
@@ -66,7 +60,8 @@ class WalletList extends Component {
     };
 
     renderedList = () => {
-        return this.showingWallets.map(item => {
+        console.log(this.props.wallets);
+        return this.props.wallets.map(item => {
             if (!item.editing) {
                 return (
                     <tr className="wallet-element" key={item.id}>
@@ -104,7 +99,7 @@ class WalletList extends Component {
 }
 
 const mapStateToProps = (state) => {
-    return {wallets: state.wallets};
+    return {wallets: Object.values(state.wallets)};
 };
 
 export default connect(mapStateToProps, {
