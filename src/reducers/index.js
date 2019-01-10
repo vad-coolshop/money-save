@@ -1,18 +1,8 @@
 import {combineReducers} from 'redux';
 import {reducer as formReducer} from 'redux-form';
 
-// const walletsReducer = (state = [], action) => {
-const walletsReducer = () => {
-    // if (action.type === 'WALLET_GET_ALL') return action.payload;
-    return [
-        {id: 0, name: 'Banca', type: 'Virtual', amount: 100},
-        {id: 1, name: 'Contante', type: 'Cash', amount: 40},
-        {id: 2, name: 'Carta', type: 'Virtual', amount: 30},
-        {id: 3, name: 'Satispay', type: 'Virtual', amount: 150},
-    ];
-
-    // return state;
-};
+import walletReducer from './walletReducer';
+import authReducer from './authReducer';
 
 const availablePagesReducer = () => {
     return [
@@ -21,36 +11,9 @@ const availablePagesReducer = () => {
     ];
 };
 
-const addNewWalletReducer = (wallet = null, action) => {
-    if (action.type === 'WALLET_ADD') return action.payload;
-    return wallet;
-};
-
-const deleteWalletReducer = (wallet = null, action) => {
-    if (action.type === 'WALLET_DELETE') return action.payload;
-    return wallet;
-};
-
-const editWalletReducer = (wallet = null, action) => {
-    if (action.type === 'WALLET_EDIT') return action.payload;
-    return wallet;
-};
-
-const walletTypesReducer = () => {
-    return [
-        {id: 0, name: '--None--'},
-        {id: 1, name: 'Virtual'},
-        {id: 2, name: 'Cash'},
-        {id: 3, name: 'Debt'},
-    ]
-};
-
 export default combineReducers({
     form: formReducer,
-    wallets: walletsReducer,
-    addNewWallet: addNewWalletReducer,
-    editWallet: editWalletReducer,
-    deleteWallet: deleteWalletReducer,
+    auth: authReducer,
+    wallets: walletReducer,
     availablePages: availablePagesReducer,
-    walletTypes: walletTypesReducer
 });

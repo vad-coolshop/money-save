@@ -1,61 +1,48 @@
 //Action creator
-import Wallets from "../api/Wallets";
+import wallets from "../api/Wallets";
+import {
+    SIGN_IN,
+    SIGN_OUT,
+    WALLET_EDIT,
+    WALLET_CREATE,
+    WALLET_DELETE,
+    WALLET_FETCH_ALL,
+    WALLET_FETCH_SINGLE
+} from "./types";
 
-export const addNewWallet = wallet => {
-    return {
-        type: 'WALLET_ADD',
-        payload: wallet
-    };
+// Login Section
+export const signIn = userId => {
+    return {type: SIGN_IN, payload: userId};
 };
 
-export const deleteWallet = (walletId) => {
-    return {
-        type: 'WALLET_DELETE',
-        payload: walletId
-    };
+export const signOut = userId => {
+    return {type: SIGN_OUT, payload: userId};
 };
 
-export const editWallet = (wallet) => {
-    return {
-        type: 'WALLET_EDIT',
-        payload: wallet
-    };
+// Wallet Section
+export const createWallet = formValues => async dispatch => {
+    const response = await wallets.post(`/wallets`, formValues);
+    dispatch({type: WALLET_CREATE, payload: response.data});
 };
 
-export const deleteExpenses = (wallet) => {
-    return {
-        type: 'EXPENSES_DELETE',
-        payload: wallet
-    };
+export const deleteWallet = walletId =>  async dispatch => {
+    await wallets.delete(`/wallets/${walletId}`);
+    dispatch({type: WALLET_DELETE, payload: walletId});
 };
 
-export const editExpenses = (wallet) => {
-    return {
-        type: 'EXPENSES_EDIT',
-        payload: wallet
-    };
+export const editWallet = (walletId, formValues) =>  async dispatch => {
+    const response = await wallets.put(`/wallets/${walletId}`, formValues);
+    dispatch({type: WALLET_EDIT, payload: response.data});
 };
 
-export const getAllWallets = () => async dispatch => {
-    // todo da cambiare l'argomento del get
-    const response = await Wallets.get('/wallets');
-    dispatch({type: 'WALLET_GET_ALL', payload: response.data});
+export const getWallets = () => async dispatch => {
+    const response = await wallets.get(`/wallets`);
+    dispatch({type: WALLET_FETCH_ALL, payload: response.data});
 };
 
-export const getWallet = (targetId) => async dispatch => {
-    // todo da cambiare l'argomento del get
-    const response = await Wallets.get(`/wallets/${targetId}`);
-    dispatch({type: 'WALLET_GET_ALL', payload: response.data});
+export const getWallet = (walletId) => async dispatch => {
+    const response = await wallets.get(`/wallets/${walletId}`);
+    dispatch({type: WALLET_FETCH_SINGLE, payload: response.data});
 };
 
-export const getAllExpenses = () => async dispatch => {
-    // todo da cambiare l'argomento del get
-    const response = await Wallets.get('/expenses');
-    dispatch({type: 'EXPENSES_GET_ALL', payload: response.data});
-};
-
-export const getRxpense = (targetId) => async dispatch => {
-    // todo da cambiare l'argomento del get
-    const response = await Wallets.get(`/expenses/${targetId}`);
-    dispatch({type: 'EXPENSES_GET_ALL', payload: response.data});
-};
+// Expenses Section

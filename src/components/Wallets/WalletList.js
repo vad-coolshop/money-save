@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Button, Table} from "react-bootstrap";
+import {Button, ButtonGroup, Table} from "react-bootstrap";
 import '../../css/components/WalletList.css';
-import WalletEditor from './WalletEditor';
-import ButtonGroup from "react-bootstrap/es/ButtonGroup";
 
-// import {getAllWallets, getWallet} from "../../actions";
+import WalletEditor from './WalletEditor';
+import {getWallets} from "../../actions";
 
 class WalletList extends Component {
 
@@ -15,6 +14,10 @@ class WalletList extends Component {
         this.state = {editing: false};
 
         this.showingWallets = this.props.wallets || [];
+    }
+
+    componentDidMount() {
+        this.props.getWallets();
     }
 
     _toggleEdit = (itemId) => {
@@ -34,7 +37,7 @@ class WalletList extends Component {
     _getWallet = (targetId) => {
     };
 
-    _addNewWallet = () => {
+    _createWallet = () => {
         this.props.newWallet({});
     };
 
@@ -52,7 +55,7 @@ class WalletList extends Component {
                     <th>Name</th>
                     <th>Type</th>
                     <th>Total</th>
-                    <th>Actions <Button bsStyle="primary" onClick={this._addNewWallet}>Add +</Button></th>
+                    <th>Actions <Button bsStyle="primary" onClick={this._createWallet}>Add +</Button></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -104,5 +107,6 @@ const mapStateToProps = (state) => {
     return {wallets: state.wallets};
 };
 
-export default connect(mapStateToProps)(WalletList);
-// export default connect(mapStateToProps, {getAllWallets, getWallet})(WalletList);
+export default connect(mapStateToProps, {
+    getWallets
+})(WalletList);

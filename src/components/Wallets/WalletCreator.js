@@ -3,15 +3,13 @@ import '../../css/components/WalletCreator.css';
 import {Button} from "react-bootstrap";
 import ButtonGroup from "react-bootstrap/es/ButtonGroup";
 import {Field, reduxForm} from "redux-form";
-import firebase from "firebase";
-
+import {connect} from "react-redux";
+import {createWallet} from "../../actions";
 
 class WalletCreator extends Component {
 
     constructor(props) {
         super(props);
-
-        this.db = firebase.database();
     }
 
     exitEditor = () => {
@@ -29,8 +27,8 @@ class WalletCreator extends Component {
 
     renderInput = (formProps) => {
         console.log(formProps);
-        // {...formProps.input} adds all standard input to <input />
 
+        // {...formProps.input} adds all standard input to <input />
         const renderError = ({error, touched}) => {
             if (touched && error)
                 return <div> {formProps.meta.error}</div>
@@ -47,20 +45,8 @@ class WalletCreator extends Component {
         );
     };
 
-    onSubmit = async (formValues) => {
-
-        let walletId = 'wallet' + Math.random();
-
-        try {
-            await this.db.ref(`users/${walletId}`).set({
-                name: formValues.name,
-                surname: formValues.surname,
-                family: formValues.family || '',
-                email: formValues.email
-            });
-        } catch (e) {
-            console.log(e);
-        }
+    onSubmit = (formValues) => {
+        this.props.createWallet(formValues);
     };
 
 
@@ -98,14 +84,15 @@ class WalletCreator extends Component {
 }
 
 const validate = (formValues) => {
-        const errors = {};
-        if (!formValues.name) errors.name = 'You must enter a name'; // redux confronta il nome con la proprietà di errors e se trova corrispondenza lancia un errore
-        if (!formValues.type) errors.type = 'You must enter a type';
-        return errors;
-    }
-;
+    const errors = {};
+    if (!formValues.name) errors.name = 'You must enter a name'; // redux confronta il nome con la proprietà di errors e se trova corrispondenza lancia un errore
+    if (!formValues.type) errors.type = 'You must enter a type';
+    return errors;
+};
 
-export default reduxForm({
+const formWrapped = reduxForm({
     form: 'walletCreatorForm',
     validate, // equivalent to validate: validate
-})(WalletCreator)
+})(WalletCreator);
+
+export default connect(null, {createWallet})(formWrapped);

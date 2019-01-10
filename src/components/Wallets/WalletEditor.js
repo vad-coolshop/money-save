@@ -18,7 +18,7 @@ class WalletEditor extends React.Component {
                                                                         value={type.name}>{type.name}</option>);
         return (
             <div className="editing-item">
-                <Form inline onSubmit={this.addNewWallet}>
+                <Form inline onSubmit={this.createWallet}>
                     <FieldGroup
                         id="formControlsName"
                         type="text"
