@@ -9,10 +9,10 @@ const Header = () => {
             <Link to="/" className="item"> Money Manager</Link>
             <div className="right menu">
                 <Link to="/" className="item"> All Wallets</Link>
-                <GoogleAuth />
+                <GoogleAuth/>
             </div>
         </div>
     );
 };
 
-    default export
+export default Header;
