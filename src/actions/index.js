@@ -1,5 +1,6 @@
 //Action creator
 import wallets from "../api/Wallets";
+// import firebase from "firebase";
 import {
     SIGN_IN,
     SIGN_OUT,
@@ -32,27 +33,30 @@ const walletsList = () => {
 };
 
 export const createWallet = formValues => async dispatch => {
+    // //temporary
+    // const response = {};
+    // response.data = {
+    //     id: 'wallet' + Math.round(Math.random()*1000),
+    //     name: formValues.name,
+    //     type: formValues.type,
+    //     amount: formValues.amount
+    // };
+    // // end temporary
 
-    //temporary
-    const response = {};
-    response.data = {
-        id: 'wallet' + Math.round(Math.random()*1000),
-        name: formValues.name,
-        type: formValues.type,
-        amount: formValues.amount
-    };
-    // end temporary
+    // firebase.initializeApp(this);
+    // const walletId = `wallet${Math.round(Math.random() * 1000)}`;
+    // const response = await firebase.database().ref('wallet/' + walletId).set(formValues);
 
-    // const response = await wallets.post(`/wallets`, formValues);
+    const response = await wallets.post(`/wallets`, formValues);
     dispatch({type: WALLET_CREATE, payload: response.data});
 };
 
-export const deleteWallet = walletId =>  async dispatch => {
+export const deleteWallet = walletId => async dispatch => {
     await wallets.delete(`/wallets/${walletId}`);
     dispatch({type: WALLET_DELETE, payload: walletId});
 };
 
-export const editWallet = (walletId, formValues) =>  async dispatch => {
+export const editWallet = (walletId, formValues) => async dispatch => {
     const response = await wallets.put(`/wallets/${walletId}`, formValues);
     dispatch({type: WALLET_EDIT, payload: response.data});
 };

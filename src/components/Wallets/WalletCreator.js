@@ -4,6 +4,7 @@ import {Button} from "react-bootstrap";
 import ButtonGroup from "react-bootstrap/es/ButtonGroup";
 import {Field, reduxForm} from "redux-form";
 import {connect} from "react-redux";
+
 import {createWallet} from "../../actions";
 
 class WalletCreator extends Component {

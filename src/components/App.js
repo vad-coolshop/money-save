@@ -38,6 +38,7 @@ class App extends Component {
                 <header className="App-header">Money Save</header>
                 <div className="App-body">
                     <BrowserRouter>
+                        <div>
                         <Header/>
                         <Grid>
                             <Col xs={3}>
@@ -48,6 +49,7 @@ class App extends Component {
                                 <Route path="/expenses" exact component={Expenses}/>
                             </Col>
                         </Grid>
+                        </div>
                     </BrowserRouter>
                 </div>
             </div>

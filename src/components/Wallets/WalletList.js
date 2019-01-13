@@ -60,7 +60,7 @@ class WalletList extends Component {
     };
 
     renderedList = () => {
-        console.log(this.props.wallets);
+        // console.log(this.props.wallets);
         return this.props.wallets.map(item => {
             if (!item.editing) {
                 return (
