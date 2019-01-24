@@ -1,17 +1,13 @@
 import React, {Component} from 'react';
 import '../../css/components/WalletCreator.css';
-import {Button} from "react-bootstrap";
-import ButtonGroup from "react-bootstrap/es/ButtonGroup";
+import {Button, ButtonGroup} from "react-bootstrap";
+import {Link} from "react-router-dom";
 import {Field, reduxForm} from "redux-form";
 import {connect} from "react-redux";
 
 import {createWallet} from "../../actions";
 
 class WalletCreator extends Component {
-
-    exitEditor = () => {
-        this.props.newWallet({});
-    };
 
     renderInput = (formProps) => {
         // {...formProps.input} adds all standard input to <input />
@@ -33,7 +29,6 @@ class WalletCreator extends Component {
 
     onSubmit = (formValues) => {
         this.props.createWallet(formValues);
-        this.exitEditor();
     };
 
 
@@ -48,7 +43,7 @@ class WalletCreator extends Component {
                     <Field name="amount" label="Starting Amount" component={this.renderInput}/>
 
                     <ButtonGroup>
-                        <Button bsStyle="primary" onClick={this.exitEditor}>Cancel</Button>
+                        <Link to="/" className="btn btn-primary">Cancel</Link>
                         <Button bsStyle="primary" type="submit">Generate</Button>
                     </ButtonGroup>
                 </form>

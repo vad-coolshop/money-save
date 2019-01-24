@@ -1,12 +1,13 @@
 //Action creator
 import wallets from "../api/Wallets";
+import history from "../history";
 // import firebase from "firebase";
 import {
     SIGN_IN,
     SIGN_OUT,
-    WALLET_EDIT,
     WALLET_CREATE,
     WALLET_DELETE,
+    WALLET_EDIT,
     WALLET_FETCH_ALL,
     WALLET_FETCH_SINGLE
 } from "./types";
@@ -32,23 +33,26 @@ const walletsList = () => {
     ];
 };
 
-export const createWallet = formValues => async dispatch => {
-    // //temporary
-    // const response = {};
-    // response.data = {
-    //     id: 'wallet' + Math.round(Math.random()*1000),
-    //     name: formValues.name,
-    //     type: formValues.type,
-    //     amount: formValues.amount
-    // };
-    // // end temporary
+export const createWallet = formValues => async (dispatch, getState) => {
+    const {userId} = getState().auth;
+    //temporary
+    const response = {};
+    response.data = {
+        id: 'wallet' + Math.round(Math.random() * 1000),
+        name: formValues.name,
+        type: formValues.type,
+        amount: formValues.amount,
+        createdBy: userId
+    };
+    // end temporary
 
     // firebase.initializeApp(this);
     // const walletId = `wallet${Math.round(Math.random() * 1000)}`;
     // const response = await firebase.database().ref('wallet/' + walletId).set(formValues);
 
-    const response = await wallets.post(`/wallets`, formValues);
+    // const response = await wallets.post(`/wallets`, {...formValues, createdBy: userId});
     dispatch({type: WALLET_CREATE, payload: response.data});
+    history.push('/');
 };
 
 export const deleteWallet = walletId => async dispatch => {

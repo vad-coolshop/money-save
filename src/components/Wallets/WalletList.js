@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Button, ButtonGroup, Table} from "react-bootstrap";
+import {Link} from "react-router-dom";
 import '../../css/components/WalletList.css';
 
 import WalletEditor from './WalletEditor';
@@ -35,10 +36,6 @@ class WalletList extends Component {
     _getWallet = (targetId) => {
     };
 
-    _createWallet = () => {
-        this.props.newWallet({});
-    };
-
     renderedTable = () => {
         const listItems = this.renderedList();
 
@@ -49,7 +46,7 @@ class WalletList extends Component {
                     <th>Name</th>
                     <th>Type</th>
                     <th>Total</th>
-                    <th>Actions <Button bsStyle="primary" onClick={this._createWallet}>Add +</Button></th>
+                    <th>Actions {this.renderCreate()}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -71,8 +68,7 @@ class WalletList extends Component {
                         <td>
                             <ButtonGroup>
                                 <Button bsStyle="danger">-</Button>
-                                {/*<Button bsStyle="primary" onClick={this._toggleEdit.bind(this)}>Edit</Button>*/}
-                                <Button bsStyle="primary" onClick={() => this._toggleEdit(item.id)}>Edit</Button>
+                                {this.renderAdmin(item)}
                                 <Button bsStyle="danger">+</Button>
                             </ButtonGroup>
                         </td>
@@ -93,13 +89,33 @@ class WalletList extends Component {
         });
     };
 
+    renderAdmin = (wallet) => {
+        if (wallet.createdBy === this.props.currentUserId) {
+            return <Button bsStyle="primary" onClick={() => this._toggleEdit(wallet.id)}>Edit</Button>
+        }
+    };
+
+    renderCreate = () => {
+        if (this.props.isSignedIn) {
+            return (
+                <div>
+                    <Link to="/wallets/new" className="btn btn-primary">Add +</Link>
+                </div>
+            );
+        }
+    };
+
     render() {
         return <div className="wallet-list">{this.renderedTable()}</div>;
     }
 }
 
 const mapStateToProps = (state) => {
-    return {wallets: Object.values(state.wallets)};
+    return {
+        wallets: Object.values(state.wallets),
+        currentUserId: state.auth.userId,
+        isSignedIn: state.isSignedIn
+    };
 };
 
 export default connect(mapStateToProps, {
