@@ -82,7 +82,6 @@ class WalletList extends Component {
                     <ButtonGroup>
                         <Button bsStyle="primary" onClick={() => this._toggleEdit(item.id)}>Cancel</Button>
                         <Button bsStyle="primary" onClick={this._saveChanges}>Save Changes</Button>
-                        <Button bsStyle="primary" onClick={this._deleteWallet}>Delete</Button>
                     </ButtonGroup>
                 </td>
             </tr>;
@@ -91,7 +90,12 @@ class WalletList extends Component {
 
     renderAdmin = (wallet) => {
         if (wallet.createdBy === this.props.currentUserId) {
-            return <Button bsStyle="primary" onClick={() => this._toggleEdit(wallet.id)}>Edit</Button>
+            return (
+                <div>
+                    <Link to={`/wallets/edit/${wallet.id}`} className="">Edit</Link>
+                    <Link to={`/wallets/delete/${wallet.id}`} className="">Delete</Link>
+                </div>
+            );
         }
     };
 

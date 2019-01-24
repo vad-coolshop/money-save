@@ -6,6 +6,7 @@ import history from '../history';
 
 import Header from './Header/Header'
 import WalletList from './Wallets/WalletList';
+import WalletEdit from './Wallets/WalletEdit';
 import NewWallet from './Wallets/WalletCreator';
 import SideBar from './SideBar/SideBar';
 
@@ -14,6 +15,8 @@ class App extends Component {
     render() {
         const Wallet = () => <WalletList />;
         const newWallet = () => <NewWallet />;
+        const WalletEdit = () => <WalletEdit />;
+        const WalletDelete = () => <NewWallet />;
         const Expenses = () => <div>Spese</div>;
 
         return (
@@ -30,6 +33,8 @@ class App extends Component {
                                 <Col xs={9}>
                                     <Route path="/" exact component={Wallet}/>
                                     <Route path="/wallets/new" exact component={newWallet}/>
+                                    <Route path="/wallets/edit/:id" exact component={WalletEdit}/>
+                                    <Route path="/wallets/delete/:id" exact component={WalletDelete}/>
                                     <Route path="/expenses" exact component={Expenses}/>
                                 </Col>
                             </Grid>
