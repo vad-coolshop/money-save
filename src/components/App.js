@@ -13,11 +13,11 @@ import SideBar from './SideBar/SideBar';
 class App extends Component {
 
     render() {
-        const Wallet = () => <WalletList />;
+        const wallets = () => <WalletList />;
         const newWallet = () => <NewWallet />;
-        const WalletEdit = () => <WalletEdit />;
-        const WalletDelete = () => <NewWallet />;
-        const Expenses = () => <div>Spese</div>;
+        const walletEdit = () => <WalletEdit />;
+        const walletDelete = () => <NewWallet />;
+        const expenses = () => <div>Spese</div>;
 
         return (
             <div className="App">
@@ -31,11 +31,11 @@ class App extends Component {
                                     <SideBar/>
                                 </Col>
                                 <Col xs={9}>
-                                    <Route path="/" exact component={Wallet}/>
+                                    <Route path="/" exact component={wallets}/>
                                     <Route path="/wallets/new" exact component={newWallet}/>
-                                    <Route path="/wallets/edit/:id" exact component={WalletEdit}/>
-                                    <Route path="/wallets/delete/:id" exact component={WalletDelete}/>
-                                    <Route path="/expenses" exact component={Expenses}/>
+                                    <Route path="/wallets/edit/:id" exact component={walletEdit}/>
+                                    <Route path="/wallets/delete/:id" exact component={walletDelete}/>
+                                    <Route path="/expenses" exact component={expenses}/>
                                 </Col>
                             </Grid>
                         </div>

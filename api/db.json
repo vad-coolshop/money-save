@@ -1,3 +1,53 @@
 {
-  "wallets": []
+  "wallets": [
+    {
+      "name": "asd",
+      "type": "asd",
+      "amount": "asd",
+      "createdBy": "115357006686876625540",
+      "id": "wallet24"
+    },
+    {
+      "name": "asd",
+      "type": "asd",
+      "amount": "asd",
+      "createdBy": "115357006686876625540",
+      "id": "wallet371"
+    },
+    {
+      "name": "asd",
+      "type": "asd",
+      "amount": "23",
+      "createdBy": "115357006686876625540",
+      "id": "FxZ_sqw"
+    },
+    {
+      "name": "13",
+      "type": "123",
+      "amount": "123",
+      "createdBy": "115357006686876625540",
+      "id": "aCA9Dzi"
+    },
+    {
+      "name": "213",
+      "type": "123",
+      "amount": "123",
+      "createdBy": "115357006686876625540",
+      "id": "GcIG_c7"
+    },
+    {
+      "name": "456",
+      "type": "456",
+      "amount": "456",
+      "createdBy": "115357006686876625540",
+      "id": "342342"
+    },
+    {
+      "name": "fsd",
+      "type": "sdf",
+      "amount": "sdf",
+      "createdBy": "115357006686876625540",
+      "id": "walletundefined"
+    }
+  ]
 }

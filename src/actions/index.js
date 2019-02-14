@@ -1,7 +1,7 @@
 //Action creator
 import wallets from "../api/Wallets";
 import history from "../history";
-// import firebase from "firebase";
+
 import {
     SIGN_IN,
     SIGN_OUT,
@@ -21,36 +21,30 @@ export const signOut = userId => {
     return {type: SIGN_OUT, payload: userId};
 };
 
-// Wallet Section
-
-//temporary
-const walletsList = () => {
-    return [
-        {id: 0, name: 'Banca', type: 'Virtual', amount: 100},
-        {id: 1, name: 'Contante', type: 'Cash', amount: 40},
-        {id: 2, name: 'Carta', type: 'Virtual', amount: 30},
-        {id: 3, name: 'Satispay', type: 'Virtual', amount: 150},
-    ];
+/**
+ *
+ * @param {string} idNum
+ * @param {int} target
+ * @returns {*}
+ * @private
+ */
+const _idGeneratorHelper = (idNum, target) => {
+    console.log(idNum);
+    if(idNum.length >= target)
+        return idNum;
+    _idGeneratorHelper(0 + idNum, target);
 };
 
+// Wallet Section
 export const createWallet = formValues => async (dispatch, getState) => {
     const {userId} = getState().auth;
-    //temporary
-    const response = {};
-    response.data = {
-        id: 'wallet' + Math.round(Math.random() * 1000),
-        name: formValues.name,
-        type: formValues.type,
-        amount: formValues.amount,
-        createdBy: userId
-    };
-    // end temporary
+    const walletId = `wallet${_idGeneratorHelper(Math.round(Math.random() * 1000) + '', 9)}`;
+    const response = await wallets.post(`/wallets`, {
+        ...formValues,
+        createdBy: userId,
+        id: walletId
+    });
 
-    // firebase.initializeApp(this);
-    // const walletId = `wallet${Math.round(Math.random() * 1000)}`;
-    // const response = await firebase.database().ref('wallet/' + walletId).set(formValues);
-
-    // const response = await wallets.post(`/wallets`, {...formValues, createdBy: userId});
     dispatch({type: WALLET_CREATE, payload: response.data});
     history.push('/');
 };
@@ -66,13 +60,7 @@ export const editWallet = (walletId, formValues) => async dispatch => {
 };
 
 export const getWallets = () => async dispatch => {
-
-    // temporary
-    const response = {};
-    response.data = walletsList();
-    // end temporary
-
-    // const response = await wallets.get(`/wallets`);
+    const response = await wallets.get(`/wallets`);
     dispatch({type: WALLET_FETCH_ALL, payload: response.data});
 };
 

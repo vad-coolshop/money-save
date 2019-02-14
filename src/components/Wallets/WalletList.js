@@ -100,7 +100,8 @@ class WalletList extends Component {
     };
 
     renderCreate = () => {
-        if (this.props.isSignedIn) {
+        // if (this.props.isSignedIn) {
+        if (true) {
             return (
                 <div>
                     <Link to="/wallets/new" className="btn btn-primary">Add +</Link>
