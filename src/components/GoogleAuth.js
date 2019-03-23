@@ -13,7 +13,6 @@ class GoogleAuth extends Component {
             });
 
             this.auth = window.gapi.auth2.getAuthInstance();
-
             this._onAuthChange(this.auth.isSignedIn.get());
             this.auth.isSignedIn.listen(this._onAuthChange);
         });

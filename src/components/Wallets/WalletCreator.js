@@ -31,13 +31,11 @@ class WalletCreator extends Component {
         this.props.createWallet(formValues);
     };
 
-
     render() {
 
         return (
             <div className="new-wallet">
                 <form className="form" onSubmit={this.props.handleSubmit(this.onSubmit)}>
-
                     <Field name="name" label="Name" component={this.renderInput}/>
                     <Field name="type" label="Type" component={this.renderInput}/>
                     <Field name="amount" label="Starting Amount" component={this.renderInput}/>
@@ -62,7 +60,7 @@ const validate = (formValues) => {
 
 const formWrapped = reduxForm({
     form: 'walletCreatorForm',
-    validate, // equivalent to validate: validate
+    validate, // equivalent to validate: 'validate'
 })(WalletCreator);
 
 export default connect(null, {createWallet})(formWrapped);

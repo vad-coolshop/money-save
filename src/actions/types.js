@@ -2,7 +2,7 @@
 export const SIGN_IN = 'SIGN_IN';
 export const SIGN_OUT = 'SIGN_OUT';
 
-// WALLET
+// WALLETS
 export const WALLET_EDIT = 'WALLET_EDIT';
 export const WALLET_DELETE = 'WALLET_DELETE';
 export const WALLET_CREATE = 'WALLET_CREATE';
