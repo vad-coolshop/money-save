@@ -34,9 +34,6 @@ class WalletList extends Component {
         this.props.deleteWallet(walletId);
     };
 
-    _getWallet = (targetId) => {
-    };
-
     renderedTable() {
         const listItems = this.renderedList();
 

@@ -26,15 +26,13 @@ export const createWallet = formValues => async (dispatch, getState) => {
 
     const idGeneratorHelper = (idNum, target) => {
         if (idNum.length >= target) {
-            console.log(idNum);
-            console.log(typeof idNum);
             return idNum;
         }
-        idGeneratorHelper('0' + idNum, target);
+        idGeneratorHelper(`0${idNum}`, target);
     };
 
     const {userId} = getState().auth;
-    const walletNum = idGeneratorHelper(Math.round(Math.random() * 1e9) + '', 9);
+    const walletNum = idGeneratorHelper(`${Math.round(Math.random() * 1e9)}`, 9);
     const walletId = `wallet-${walletNum}`;
     const response = await wallets.post(`/wallets`, {...formValues, createdBy: userId, id: walletId});
 
@@ -53,8 +51,9 @@ export const getWallet = (walletId) => async dispatch => {
 };
 
 export const editWallet = (walletId, formValues) => async dispatch => {
-    const response = await wallets.put(`/wallets/${walletId}`, formValues);
+    const response = await wallets.patch(`/wallets/${walletId}`, formValues);
     dispatch({type: WALLET_EDIT, payload: response.data});
+    history.push('/');
 };
 
 export const deleteWallet = walletId => async dispatch => {
