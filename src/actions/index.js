@@ -59,6 +59,7 @@ export const editWallet = (walletId, formValues) => async dispatch => {
 export const deleteWallet = walletId => async dispatch => {
     await wallets.delete(`/wallets/${walletId}`);
     dispatch({type: WALLET_DELETE, payload: walletId});
+    history.push('/');
 };
 
 // Expenses Section
