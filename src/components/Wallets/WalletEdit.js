@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {editWallet, getWallet} from "../../actions";
-import WalletForm from "WalletForm"
+import WalletForm from "./WalletForm"
 
 class WalletEdit extends Component {
     componentDidMount() {
@@ -31,7 +31,7 @@ class WalletEdit extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    return {wallet: state.wallets[ownProps.match.params.id],}
+    return {wallet: state.wallets[ownProps.match.params.id]}
 };
 
 export default connect(mapStateToProps, {getWallet, editWallet})(WalletEdit);

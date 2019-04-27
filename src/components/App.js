@@ -13,12 +13,6 @@ import WalletShow from './Wallets/WalletShow';
 class App extends Component {
 
     render() {
-        const wallets = () => <WalletList/>;
-        const walletCreator = () => <WalletCreator/>;
-        const walletEdit = () => <WalletEdit/>;
-        const walletDelete = () => <WalletDelete/>;
-        const walletShow = () => <WalletShow/>;
-
         return (
             <div className="App">
                 <header className="App-header">Money Save</header>
@@ -27,12 +21,11 @@ class App extends Component {
                         <div>
                             <Header/>
                             <Switch>
-                                <Route path="/" exact component={wallets}/>
-                                <Route path="/wallets/new" exact component={walletCreator}/>
-                                <Route path="/wallets/edit/:id" exact component={walletEdit}/>
-                                <Route path="/wallets/edit/:id" exact component={walletEdit}/>
-                                <Route path="/wallets/delete/:id" exact component={walletDelete}/>
-                                <Route path="/wallets/:id" exact component={walletShow}/>
+                                <Route path="/" exact component={WalletList}/>
+                                <Route path="/wallets/new" exact component={WalletCreator}/>
+                                <Route path="/wallets/edit/:id" exact component={WalletEdit}/>
+                                <Route path="/wallets/delete/:id" exact component={WalletDelete}/>
+                                <Route path="/wallets/:id" exact component={WalletShow}/>
                             </Switch>
                         </div>
                     </Router>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../../css/components/WalletCreator.css';
 import {connect} from "react-redux";
-import WalletForm from "WalletForm"
+import WalletForm from "./WalletForm"
 
 import {createWallet} from "../../actions";
 
