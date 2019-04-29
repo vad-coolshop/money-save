@@ -23,15 +23,15 @@ class WalletList extends Component {
         return (
             <Table>
                 <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Total</th>
-                    <th>Actions</th>
-                </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
                 </thead>
                 <tbody>
-                {listItems}
+                    {listItems}
                 </tbody>
                 <tfoot>
                 <tr>
@@ -89,7 +89,7 @@ class WalletList extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
         wallets: Object.values(state.wallets),
         currentUserId: state.auth.userId,

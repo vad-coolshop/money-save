@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Modal from '../Modal'
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import history from '../../history';
 
-import {getWallet} from "../../actions";
+import {getWallet, deleteWallet} from "../../actions";
 
-class WalletDelete extends Component {
+class WalletDelete extends React.Component {
     componentDidMount() {
         this.props.getWallet(this.props.match.params.id);
     }
@@ -23,7 +23,7 @@ class WalletDelete extends Component {
     };
 
     renderContent() {
-        if (!this.props.stream) {
+        if (!this.props.wallet) {
             return 'Sure?'
         }
 
@@ -36,7 +36,8 @@ class WalletDelete extends Component {
                 title="Delete Wallet"
                 content={this.renderContent()}
                 actions={this.renderActions()}
-                onDismiss={() => history.push('/')}/>
+                onDismiss={() => history.push('/')}
+            />
         );
     }
 }
@@ -45,4 +46,4 @@ const mapStateToProps = (state, ownProps) => {
     return {wallet: state.wallets[ownProps.match.params.id]};
 };
 
-export default connect(mapStateToProps, {getWallet})(WalletDelete);
+export default connect(mapStateToProps, {getWallet, deleteWallet})(WalletDelete);
