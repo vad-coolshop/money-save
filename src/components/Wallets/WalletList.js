@@ -17,50 +17,23 @@ class WalletList extends Component {
         this.props.getWallets();
     }
 
-    renderedTable() {
-        const listItems = this.renderedList();
-
+    renderHeader() {
         return (
-            <Table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Total</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {listItems}
-                </tbody>
-                <tfoot>
-                <tr>
-                    <td colSpan="4">{this.renderCreate()}</td>
-                </tr>
-                </tfoot>
-            </Table>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
         );
-    };
+    }
 
     renderedList() {
-        return this.props.wallets.map(item => {
-            return (
-                <tr className="wallet-element" key={item.id}>
-                    <td><Link to={`/wallets/show/${item.id}`}>{item.name}</Link></td>
-                    <td>{item.type}</td>
-                    <td>{item.amount}</td>
-                    <td>
-                        <ButtonGroup>
-                            {this.renderAdmin(item)}
-                        </ButtonGroup>
-                    </td>
-                </tr>
-            );
-        });
-    };
+        const _getActions = (wallet) => {
+            if (!wallet.createdBy === this.props.currentUserId) {
+                return <div></div>
+            }
 
-    renderAdmin(wallet) {
-        if (wallet.createdBy === this.props.currentUserId) {
             return (
                 <div>
                     <Link to={`/wallets/edit/${wallet.id}`} className="">
@@ -71,17 +44,30 @@ class WalletList extends Component {
                     </Link>
                 </div>
             );
-        }
+        };
+
+        return this.props.wallets.map(item => {
+            return (
+                <tr className="wallet-element" key={item.id}>
+                    <td><Link to={`/wallets/show/${item.id}`}>{item.name}</Link></td>
+                    <td>{item.type}</td>
+                    <td>{item.amount}</td>
+                    <td><ButtonGroup>{_getActions(item)}</ButtonGroup></td>
+                </tr>
+            );
+        });
     };
 
-    renderCreate() {
-        if (this.props.isSignedIn) {
-            return (
-                <div>
-                    <Link to="/wallets/new" className="btn btn-primary">Add +</Link>
-                </div>
-            );
-        }
+    renderedTable() {
+        const listItems = this.renderedList();
+        const headerItems = this.renderHeader();
+
+        return (
+            <Table>
+                <thead>{headerItems}</thead>
+                <tbody>{listItems}</tbody>
+            </Table>
+        );
     };
 
     render() {

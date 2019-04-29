@@ -15,7 +15,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <header className="App-header">Money Save</header>
+                <header className="App-header"></header>
                 <div className="App-body">
                     <Router history={history}>
                         <div>

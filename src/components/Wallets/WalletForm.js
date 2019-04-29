@@ -23,12 +23,9 @@ class WalletForm extends Component {
         );
     };
 
-    onSubmit = (formValues) => {
-        this.props.onSubmit(formValues);
-    };
+    onSubmit = formValues => this.props.onSubmit(formValues);
 
     render() {
-
         return (
             <div className="new-wallet">
                 <form className="form" onSubmit={this.props.handleSubmit(this.onSubmit)}>
@@ -38,7 +35,7 @@ class WalletForm extends Component {
 
                     <ButtonGroup>
                         <Link to="/" className="btn btn-primary">Cancel</Link>
-                        <Button bsStyle="primary" type="submit">Generate</Button>
+                        <Button bsStyle="primary" type="submit">Save</Button>
                     </ButtonGroup>
                 </form>
             </div>

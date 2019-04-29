@@ -1,457 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e0a1f06-a138-420f-b03a-2fcd8bd393a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Wallets/WalletCreator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Wallets/WalletDelete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Wallets/WalletEdit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Wallets/WalletList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Wallets/WalletShow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/dist/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/dist/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/lib/asn1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/lib/asn1/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/lib/asn1/base/buffer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/lib/asn1/base/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/lib/asn1/base/node.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/lib/asn1/base/reporter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/lib/asn1/constants/der.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/lib/asn1/constants/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/lib/asn1/decoders/der.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/lib/asn1/decoders/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/lib/asn1/decoders/pem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/lib/asn1/encoders/der.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/lib/asn1/encoders/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/lib/asn1/encoders/pem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/asn1.js/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/assert/node_modules/inherits/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/assert/node_modules/inherits/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/assert/node_modules/inherits/inherits.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/assert/node_modules/inherits/inherits_browser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/assert/node_modules/inherits/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/assert/node_modules/inherits/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/assert/node_modules/util/support/isBuffer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/big.js/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/big.js/LICENCE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/big.js/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/big.js/big.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/big.js/big.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/big.js/big.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/big.js/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/braces/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/braces/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/braces/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/braces/lib/braces.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/braces/lib/compilers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/braces/lib/parsers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/braces/lib/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/braces/node_modules/extend-shallow/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/braces/node_modules/extend-shallow/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/braces/node_modules/extend-shallow/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/braces/node_modules/extend-shallow/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/braces/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/brorand/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/brorand/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/brorand/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/brorand/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/brorand/test/api-test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/AUTHORS.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/bin/download-node-tests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/bin/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/bin/update-authors.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/bin/zuul-es5.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/bin/zuul-es6.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/_polyfill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/base64.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/basic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/compare.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/constructor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/from-string.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/is-buffer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/methods.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-alloc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-arraybuffer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-ascii.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-bad-overload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-badhex.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-bytelength.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-compare-offset.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-concat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-fill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-includes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-indexof.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-inheritance.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-inspect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-iterator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-safe-unsafe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-slow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-swap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-zero-fill-cli.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer-zero-fill-reset.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/node/test-buffer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/slice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/static.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/to-string.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/write.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/buffer/test/write_infinity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/README.es.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/get.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/lib/content/path.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/lib/content/read.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/lib/content/rm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/lib/content/write.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/lib/entry-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/lib/memoization.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/lib/util/fix-owner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/lib/util/hash-to-segments.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/lib/util/move-file.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/lib/util/tmp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/lib/util/y.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/lib/verify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/locales/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/locales/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/locales/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/locales/es.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/ls.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/put.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/rm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cacache/verify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/chownr/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/chownr/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/chownr/chownr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/chownr/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cyclist/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cyclist/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cyclist/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/cyclist/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/.jscsrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/.jshintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/lib/des.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/lib/des/cbc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/lib/des/cipher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/lib/des/des.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/lib/des/ede.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/lib/des/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/test/cbc-test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/test/des-test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/test/ede-test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/test/fixtures.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/des.js/test/utils-test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/.airtap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/History.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/events.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/add-listeners.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/check-listener-leaks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/errors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/events-list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/legacy-compat.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/listener-count.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/listeners-side-effects.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/listeners.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/max-listeners.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/method-names.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/modify-in-emit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/num-args.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/once.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/prepend.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/remove-all-listeners.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/remove-listeners.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/set-max-listeners-side-effects.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/special-event-names.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/subclass.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/events/tests/symbols.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/changelog.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/lib/compilers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/lib/extglob.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/lib/parsers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/lib/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/define-property/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/define-property/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/define-property/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/define-property/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/extend-shallow/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/extend-shallow/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/extend-shallow/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/extend-shallow/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/is-accessor-descriptor/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/is-accessor-descriptor/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/is-accessor-descriptor/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/is-accessor-descriptor/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/is-data-descriptor/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/is-data-descriptor/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/is-data-descriptor/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/is-data-descriptor/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/is-descriptor/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/is-descriptor/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/is-descriptor/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/node_modules/is-descriptor/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/extglob/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/find-up/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/find-up/license" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/find-up/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/find-up/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/for-in/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/for-in/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/for-in/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/for-in/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/lib/hash.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/lib/hash.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/lib/hash/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/lib/hash/hmac.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/lib/hash/ripemd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/lib/hash/sha.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/lib/hash/sha/1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/lib/hash/sha/224.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/lib/hash/sha/256.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/lib/hash/sha/384.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/lib/hash/sha/512.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/lib/hash/sha/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/lib/hash/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/test/hash-test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/hash.js/test/hmac-test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/ieee754/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/ieee754/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/ieee754/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/ieee754/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/indexof/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/indexof/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/indexof/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/indexof/component.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/indexof/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/indexof/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/is-glob/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/is-glob/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/is-glob/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/is-glob/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/isarray/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/isarray/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/isarray/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/isarray/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/isarray/component.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/isarray/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/isarray/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/isarray/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/kind-of/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/kind-of/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/md5.js/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/md5.js/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/md5.js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/md5.js/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/bin/cmd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/bin/usage.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/examples/pow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/node_modules/minimist/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/node_modules/minimist/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/node_modules/minimist/example/parse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/node_modules/minimist/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/node_modules/minimist/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/node_modules/minimist/readme.markdown" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/node_modules/minimist/test/dash.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/node_modules/minimist/test/default_bool.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/node_modules/minimist/test/dotted.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/node_modules/minimist/test/long.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/node_modules/minimist/test/parse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/node_modules/minimist/test/parse_modified.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/node_modules/minimist/test/short.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/node_modules/minimist/test/whitespace.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/readme.markdown" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/chmod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/clobber.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/mkdirp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/opts_fs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/opts_fs_sync.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/perm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/perm_sync.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/race.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/rel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/return.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/return_sync.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/root.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/sync.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/umask.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/mkdirp/test/umask_sync.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/pbkdf2/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/pbkdf2/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/pbkdf2/browser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/pbkdf2/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/pbkdf2/lib/async.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/pbkdf2/lib/default-encoding.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/pbkdf2/lib/precondition.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/pbkdf2/lib/sync-browser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/pbkdf2/lib/sync.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/pbkdf2/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/rimraf/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/rimraf/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/rimraf/bin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/rimraf/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/rimraf/rimraf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/semver/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/semver/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/semver/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/semver/bin/semver" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/semver/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/semver/range.bnf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/semver/semver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/bin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/hash.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/sha.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/sha1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/sha224.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/sha256.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/sha384.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/sha512.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/test/hash.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/test/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/sha.js/test/vectors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/PATRONS.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/bin/uglifyjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/bin/uglifyjsnobundle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/dist/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/dist/bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/dist/bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/dist/bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/dist/bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/dist/source-map.debug.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/dist/source-map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/dist/source-map.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/dist/source-map.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/lib/array-set.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/lib/base64-vlq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/lib/base64.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/lib/binary-search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/lib/mapping-list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/lib/quick-sort.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/lib/source-map-consumer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/lib/source-map-generator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/lib/source-node.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/lib/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/source-map.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/node_modules/source-map/source-map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/tools/colorless-console.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/tools/domprops.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/tools/exit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/tools/node.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/tools/props.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/terser/tools/terser.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/bower.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/es5/uri.all.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/es5/uri.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/es5/uri.all.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/es5/uri.all.min.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/es5/uri.all.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/es5/uri.all.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/index.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/regexps-iri.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/regexps-iri.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/regexps-iri.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/regexps-uri.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/regexps-uri.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/regexps-uri.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/http.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/http.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/http.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/https.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/https.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/https.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/mailto.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/mailto.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/mailto.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/urn-uuid.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/urn-uuid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/urn-uuid.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/urn.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/urn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/schemes/urn.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/uri.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/uri.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/uri.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/util.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/dist/esnext/util.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/rollup.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/src/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/src/punycode.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/src/regexps-iri.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/src/regexps-uri.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/src/schemes/http.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/src/schemes/https.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/src/schemes/mailto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/src/schemes/urn-uuid.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/src/schemes/urn.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/src/uri.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/src/util.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/tests/qunit.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/tests/qunit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/tests/test-es5-min.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/tests/test-es5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/tests/tests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/uri-js/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/wrappy/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/wrappy/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/wrappy/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/node_modules/wrappy/wrappy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack-demo/webpack.config.js" afterDir="false" />
+    <list default="true" id="0e0a1f06-a138-420f-b03a-2fcd8bd393a0" name="Default Changelist" comment="error fix">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/components/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Wallets/WalletForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wallets/WalletForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Wallets/WalletList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wallets/WalletList.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -465,73 +21,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/webpack-demo/webpack.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack-demo/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack-demo/dist/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-122537">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#17391#17396#1" expanded="true" />
-                <element signature="e#17410#17414#1" expanded="true" />
-                <element signature="e#17428#17432#1" expanded="true" />
-                <element signature="e#17447#17453#1" expanded="true" />
-                <element signature="e#17469#17474#1" expanded="true" />
-                <element signature="e#17566#17571#1" expanded="true" />
-                <element signature="e#17585#17589#1" expanded="true" />
-                <element signature="e#17603#17607#1" expanded="true" />
-                <element signature="e#17621#17627#1" expanded="true" />
-                <element signature="e#17642#17647#1" expanded="true" />
-                <element signature="e#370162#370167#0" expanded="true" />
-                <element signature="e#468905#468910#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            <state relative-caret-position="51">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Wallets/WalletForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -539,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Wallets/WalletList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="90" selection-start-line="90" selection-end-line="90" />
+            <state relative-caret-position="289">
+              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -580,12 +83,12 @@
       <find>getWallets</find>
       <find>this.props</find>
       <find>resources</find>
-      <find>renderCreate</find>
       <find>toggle</find>
       <find>renderedList</find>
       <find>deleteWallet</find>
       <find>walletTypes</find>
       <find>web</find>
+      <find>renderCreate</find>
     </findStrings>
     <replaceStrings>
       <replace>RepsList</replace>
@@ -626,7 +129,6 @@
         <option value="$PROJECT_DIR$/src/css/components/WalletCreator.css" />
         <option value="$PROJECT_DIR$/src/reducers/walletReducer.js" />
         <option value="$PROJECT_DIR$/src/components/Login/login.js" />
-        <option value="$PROJECT_DIR$/src/components/Header/Header.js" />
         <option value="$PROJECT_DIR$/package-lock.json" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
@@ -638,7 +140,6 @@
         <option value="$PROJECT_DIR$/../Desktop/Database/money-save/api/package.json" />
         <option value="$PROJECT_DIR$/src/actions/types.js" />
         <option value="$PROJECT_DIR$/src/components/GoogleAuth.js" />
-        <option value="$PROJECT_DIR$/src/components/Wallets/WalletForm.js" />
         <option value="$PROJECT_DIR$/src/css/components/modal.scss" />
         <option value="$PROJECT_DIR$/public/modal.html" />
         <option value="$PROJECT_DIR$/public/index.html" />
@@ -647,8 +148,6 @@
         <option value="$PROJECT_DIR$/src/components/Wallets/WalletCreator.js" />
         <option value="$PROJECT_DIR$/src/components/Wallets/WalletEdit.js" />
         <option value="$PROJECT_DIR$/src/components/Wallets/WalletEditor.js" />
-        <option value="$PROJECT_DIR$/src/components/Wallets/WalletList.js" />
-        <option value="$PROJECT_DIR$/src/components/App.js" />
         <option value="$PROJECT_DIR$/src/css/components/App.css" />
         <option value="$PROJECT_DIR$/src/components/Wallets/WalletDelete.js" />
         <option value="$PROJECT_DIR$/src/sass/components/_modal.scss" />
@@ -662,10 +161,14 @@
         <option value="$PROJECT_DIR$/webpack-demo/webpack.config.js" />
         <option value="$PROJECT_DIR$/webpack-demo/package.json" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/components/App.js" />
+        <option value="$PROJECT_DIR$/src/components/Header/Header.js" />
+        <option value="$PROJECT_DIR$/src/components/Wallets/WalletForm.js" />
+        <option value="$PROJECT_DIR$/src/components/Wallets/WalletList.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -679,7 +182,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -703,6 +205,13 @@
               <item name="money-save" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="money-save" type="b2602c69:ProjectViewProjectNode" />
+              <item name="money-save" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Wallets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -710,22 +219,11 @@
               <item name="money-save" type="462c0819:PsiDirectoryNode" />
               <item name="webpack-demo" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="money-save" type="b2602c69:ProjectViewProjectNode" />
-              <item name="money-save" type="462c0819:PsiDirectoryNode" />
-              <item name="webpack-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="money-save" type="b2602c69:ProjectViewProjectNode" />
-              <item name="money-save" type="462c0819:PsiDirectoryNode" />
-              <item name="webpack-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -733,7 +231,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556558032718" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556560361376" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Wallets" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -977,13 +475,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154817000" />
+    <option name="totallyTimeSpent" value="156238000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1359275" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27899343" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1001,7 +499,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49893278" weight="0.3802817" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50160086" side_tool="true" weight="0.32861805" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49839914" visible="true" weight="0.32719395" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49839914" weight="0.32719395" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1105,16 +603,6 @@
           <caret line="126" column="1" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1223,16 +711,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Wallets/MoneyFluxes/MoneyFluxDetail.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Wallets/WalletForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1343,13 +821,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack-demo/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack-demo/src/index.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Modal.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1360,52 +832,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack-demo/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack-demo/dist/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-122537">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#17391#17396#1" expanded="true" />
-            <element signature="e#17410#17414#1" expanded="true" />
-            <element signature="e#17428#17432#1" expanded="true" />
-            <element signature="e#17447#17453#1" expanded="true" />
-            <element signature="e#17469#17474#1" expanded="true" />
-            <element signature="e#17566#17571#1" expanded="true" />
-            <element signature="e#17585#17589#1" expanded="true" />
-            <element signature="e#17603#17607#1" expanded="true" />
-            <element signature="e#17621#17627#1" expanded="true" />
-            <element signature="e#17642#17647#1" expanded="true" />
-            <element signature="e#370162#370167#0" expanded="true" />
-            <element signature="e#468905#468910#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack-demo/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack-demo/dist/index.html" />
+    <entry file="file://$PROJECT_DIR$/webpack-demo/dist/main.js" />
+    <entry file="file://$PROJECT_DIR$/webpack-demo/package.json" />
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        <state relative-caret-position="204">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webpack-demo/webpack.config.js" />
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        <state relative-caret-position="136">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -1414,8 +862,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        <state relative-caret-position="51">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wallets/WalletForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -1424,18 +879,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Wallets/WalletList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        <state relative-caret-position="289">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack-demo/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
         </state>
       </provider>
     </entry>
