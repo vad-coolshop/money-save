@@ -6,10 +6,10 @@ import WalletForm from "./WalletForm"
 
 class WalletEdit extends Component {
     componentDidMount() {
-        getWallet(this.props.match.params.id);
+        getWallet(this.props.match.params.walletId);
     }
 
-    onSubmit = (formValues) => {
+    onSubmit = formValues => {
         this.props.editWallet(this.props.match.params.id, formValues);
     };
 
@@ -31,7 +31,7 @@ class WalletEdit extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    return {wallet: state.wallets[ownProps.match.params.id]}
+    return {wallet: state.wallets[ownProps.match.params.walletId]}
 };
 
 export default connect(mapStateToProps, {getWallet, editWallet})(WalletEdit);

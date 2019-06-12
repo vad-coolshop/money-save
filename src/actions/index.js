@@ -62,4 +62,8 @@ export const deleteWallet = walletId => async dispatch => {
     history.push('/');
 };
 
+export const createFlux = (walletId, formValues, isAdd) => {
+
+};
+
 // Expenses Section

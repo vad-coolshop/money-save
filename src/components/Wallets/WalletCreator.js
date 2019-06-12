@@ -7,7 +7,7 @@ import {createWallet} from "../../actions";
 
 class WalletCreator extends Component {
 
-    onSubmit = (formValues) => {
+    onSubmit = formValues => {
         this.props.createWallet(formValues);
     };
 
@@ -15,9 +15,7 @@ class WalletCreator extends Component {
         return (
             <div>
                 <h3>Create a Wallet</h3>
-                <WalletForm
-                    onSubmit={this.onSubmit}
-                ></WalletForm>
+                <WalletForm onSubmit={this.onSubmit}></WalletForm>
             </div>
         )
     }

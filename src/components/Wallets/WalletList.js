@@ -29,7 +29,7 @@ class WalletList extends Component {
     }
 
     renderedList() {
-        const _getActions = (wallet) => {
+        const _getActions = wallet => {
             if (!wallet.createdBy === this.props.currentUserId) {
                 return <div></div>
             }
@@ -75,7 +75,7 @@ class WalletList extends Component {
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = state => {
     return {
         wallets: Object.values(state.wallets),
         currentUserId: state.auth.userId,
