@@ -12,6 +12,16 @@ import {
     WALLET_FETCH_SINGLE
 } from "./types";
 
+const idGeneratorHelper = (target, idNum = '') => {
+    if (!idNum)
+        idNum = `${Math.round(Math.random() * 1e9)}`;
+
+    if (idNum.length >= target)
+        return idNum;
+
+    idGeneratorHelper(target, `0${idNum}`);
+};
+
 // Login Section
 export const signIn = userId => {
     return {type: SIGN_IN, payload: userId};
@@ -23,16 +33,8 @@ export const signOut = userId => {
 
 // Wallet Section
 export const createWallet = formValues => async (dispatch, getState) => {
-
-    const idGeneratorHelper = (idNum, target) => {
-        if (idNum.length >= target) {
-            return idNum;
-        }
-        idGeneratorHelper(`0${idNum}`, target);
-    };
-
     const {userId} = getState().auth;
-    const walletNum = idGeneratorHelper(`${Math.round(Math.random() * 1e9)}`, 9);
+    const walletNum = idGeneratorHelper(9);
     const walletId = `wallet-${walletNum}`;
     const response = await wallets.post(`/wallets`, {...formValues, createdBy: userId, id: walletId});
 
