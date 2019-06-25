@@ -4,6 +4,7 @@ import {ButtonGroup, Table} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import '../../css/components/WalletList.css';
 import {deleteWallet, getWallets} from "../../actions";
+import R from 'ramda';
 
 class WalletList extends Component {
 
