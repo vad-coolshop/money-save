@@ -1,5 +1,6 @@
 //Action creator
 import wallets from "../api/Wallets";
+import fluxes from "../api/Fluxes";
 import history from "../history";
 
 import {
@@ -9,18 +10,21 @@ import {
     WALLET_DELETE,
     WALLET_EDIT,
     WALLET_FETCH_ALL,
-    WALLET_FETCH_SINGLE
+    WALLET_FETCH_SINGLE,
+    EXPENSES_CREATE
 } from "./types";
 
 const idGeneratorHelper = (target, idNum = '') => {
     if (!idNum)
         idNum = `${Math.round(Math.random() * 1e9)}`;
-
+    
     if (idNum.length >= target)
         return idNum;
-
+    
     idGeneratorHelper(target, `0${idNum}`);
 };
+
+const idGenerator = (target = 9, type = 'wallet') => `${type}-${idGeneratorHelper(target)}`;
 
 // Login Section
 export const signIn = userId => {
@@ -34,10 +38,13 @@ export const signOut = userId => {
 // Wallet Section
 export const createWallet = formValues => async (dispatch, getState) => {
     const {userId} = getState().auth;
-    const walletNum = idGeneratorHelper(9);
-    const walletId = `wallet-${walletNum}`;
-    const response = await wallets.post(`/wallets`, {...formValues, createdBy: userId, id: walletId});
-
+    const response = await wallets.post(`/wallets`,
+        {
+            ...formValues,
+            createdBy: userId,
+            id: idGenerator(9, 'wallet')
+        });
+    
     dispatch({type: WALLET_CREATE, payload: response.data});
     history.push('/');
 };
@@ -64,8 +71,18 @@ export const deleteWallet = walletId => async dispatch => {
     history.push('/');
 };
 
-export const createFlux = (walletId, formValues, isAdd) => {
-
+export const createFlux = (walletId, formValues) => async (dispatch, getState) => {
+    const {userId} = getState().auth;
+    const response = await fluxes.post(`/fluxes`,
+        {
+            ...formValues,
+            createdBy: userId,
+            id: idGenerator(9, 'flux'),
+            walletId: walletId
+        });
+    
+    dispatch({type: WALLET_CREATE, payload: response.data});
+    history.push('/');
 };
 
 // Expenses Section

@@ -25,10 +25,10 @@ class App extends Component {
                             <Switch>
                                 <Route path="/" exact component={WalletList}/>
                                 <Route path="/wallets/new" exact component={WalletCreator}/>
-                                <Route path="/wallets/edit/:walletId" exact component={WalletEdit}/>
-                                <Route path="/wallets/delete/:walletId" exact component={WalletDelete}/>
                                 <Route path="/wallets/:walletId" exact component={WalletShow}/>
-                                <Route path="/wallet/:walletId/:op" exact component={FluxCreator}/>
+                                <Route path="/wallets/edit/:walletId" exact component={WalletEdit}/>
+                                <Route path="/wallet/edit/:walletId/addFlux" exact component={FluxCreator}/>
+                                <Route path="/wallets/delete/:walletId" exact component={WalletDelete}/>
                             </Switch>
                         </div>
                     </Router>

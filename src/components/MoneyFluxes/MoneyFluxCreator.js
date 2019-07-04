@@ -4,6 +4,9 @@ import {Button, ButtonGroup} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import {Field, reduxForm} from "redux-form";
 
+import {createFlux, createWallet} from "../../actions";
+import connect from "react-redux/es/connect/connect";
+
 class MoneyFluxCreator extends Component {
 
     renderInput = formProps => {
@@ -54,4 +57,5 @@ const validate = formValues => {
 export default reduxForm({
     form: 'MoneyFluxCreator',
     validate,
+    createWallet
 })(MoneyFluxCreator);
